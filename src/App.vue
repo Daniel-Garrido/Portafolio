@@ -3,6 +3,8 @@
 //importar los componentes al archivo principal 
 import Header from './components/header.vue';
 import SobreMi from './components/sobre-mi.vue';
+import Proyectos from './components/proyectos.vue';
+
 
 </script>
 
@@ -40,6 +42,8 @@ import SobreMi from './components/sobre-mi.vue';
 
     <SobreMi />
   
+    <Proyectos />
+    
   </div>
 
 </template>
