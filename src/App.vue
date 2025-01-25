@@ -4,8 +4,8 @@
 import Header from './components/header.vue';
 import SobreMi from './components/sobre-mi.vue';
 import Proyectos from './components/proyectos.vue';
-
-
+import Habilidades from './components/habilidades.vue';
+import Footer from './components/footer.vue';
 </script>
 
 <template>
@@ -43,7 +43,11 @@ import Proyectos from './components/proyectos.vue';
     <SobreMi />
   
     <Proyectos />
-    
+
+    <Habilidades />
+
+    <Footer />
+
   </div>
 
 </template>

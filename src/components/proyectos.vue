@@ -4,36 +4,36 @@ export default {
     return {
       seleccionarCategoria: "all",
       proyectos: [
-        { titulo: "Proyecto 1",
-          descripcion: "descripcion del proyecto", 
+        { titulo: "Coffee shop",
+          descripcion: "Diseño visual de una cafeteria.", 
           categoria: "diseño", 
-          imagen: "", 
+          imagen: "/proyectos/ProyectoCafeteria1.png", 
         },
-        { titulo: "Proyecto 2",
-          descripcion: "descripcion del proyecto", 
+        { titulo: "Maia 2.0",
+          descripcion: "Diseño visual de un dashboard para la realización de cuestionarios.", 
           categoria: "diseño", 
-          imagen: "", 
+          imagen: "/proyectos/ProyectoDashboardMaia21.png", 
         },
-        { titulo: "Proyecto 3",
-          descripcion: "descripcion del proyecto", 
+        { titulo: "Tecnm Sistemas",
+          descripcion: "Diseño visual de una pagina dedicada a la carrera de ingeniería en sistemas computacionales.", 
           categoria: "diseño", 
-          imagen: "", 
+          imagen: "/proyectos/ProyectoTecSistemas1.png", 
         },
-        { titulo: "Proyecto 4",
-          descripcion: "descripcion del proyecto", 
+        { titulo: "Maikron ORG",
+          descripcion: "Landing page para la empresa Maikron ORG.", 
           categoria: "programacion", 
-          imagen: "", 
+          imagen: "/proyectos/ProyectoMaikron1.png", 
         },
-        { titulo: "Proyecto 5",
-          descripcion: "descripcion del proyecto", 
+        { titulo: "Laser Pro",
+          descripcion: "Landing page para una empresa de depilación laser", 
           categoria: "programacion", 
-          imagen: "", 
+          imagen: "/proyectos/ProyectLaserPro1.png", 
         },
 
-        { titulo: "Proyecto 6",
-          descripcion: "descripcion del proyecto", 
+        { titulo: "Italika compilator",
+          descripcion: "Software de analizador léxico.", 
           categoria: "software", 
-          imagen: "", 
+          imagen: "/proyectos/ProyectoItalika1.png", 
         },
 
 
@@ -68,8 +68,8 @@ export default {
 
 <template>
 
-<section class="bg-light vh-100">
-  <h2 class="text-center">Proyectos</h2>
+<section class="bg-light ">
+  <h2 class="text-center p-4">Proyectos</h2>
 
   <div class="container mt-4">
     <!-- Select para filtrar las categorías -->
@@ -85,12 +85,15 @@ export default {
     <!-- Contenido de las tarjetas (cards) -->
     <div class="row">
       <div v-for="(project, index) in proyectosFiltrados" :key="index" class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card ">
           <img :src="project.imagen" class="card-img-top" :alt="project.titulo" />
-          <div class="card-body">
-            <h5 class="card-title">{{ project.titulo }}</h5>
+          <div class="card-body card-body-proyectos">
+            <h5 class="card-title text-center">{{ project.titulo }}</h5>
             <p class="card-text">{{ project.descripcion }}</p>
-            <a href="#" class="btn btn-primary">Ver Proyecto</a>
+            <div class="d-flex justify-content-center">
+               <a href="#" class=" btn btn-primary">Ver Proyecto</a>
+            </div>
+           
           </div>  
         </div>
       </div>
@@ -102,5 +105,6 @@ export default {
 </template>
 
 <style>
+
 
 </style>
