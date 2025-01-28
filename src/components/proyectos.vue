@@ -69,7 +69,8 @@ export default {
 <template>
 
 <section class="bg-light ">
-  <h2 class="text-center p-4">Proyectos</h2>
+  <h2 class="text-center p-2">Proyectos</h2>
+  <hr class="hr">
 
   <div class="container mt-4">
     <!-- Select para filtrar las categorías -->
@@ -85,8 +86,8 @@ export default {
     <!-- Contenido de las tarjetas (cards) -->
     <div class="row">
       <div v-for="(project, index) in proyectosFiltrados" :key="index" class="col-md-4 mb-4">
-        <div class="card ">
-          <img :src="project.imagen" class="card-img-top" :alt="project.titulo" />
+        <div class="card card-proyectos">
+          <img :src="project.imagen" class="card-img-top " :alt="project.titulo" />
           <div class="card-body card-body-proyectos">
             <h5 class="card-title text-center">{{ project.titulo }}</h5>
             <p class="card-text">{{ project.descripcion }}</p>
@@ -105,6 +106,24 @@ export default {
 </template>
 
 <style>
+.card-proyectos{
+  border-radius: 0px;
+  border: none;
+}
+.form-select{
+  border: none;
+  padding: 5px 15px;
+}
 
+/* ajustar el tamaño a las imagenes */
+.card-img-top {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.card {
+  height: 100%; 
+}
 
 </style>
