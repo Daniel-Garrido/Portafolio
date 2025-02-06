@@ -16,9 +16,9 @@ import Servicios from './components/servicios.vue';
     <Header />
 
     <!-- seccion de inicio -->
-    <section class="d-flex justify-content-center align-items-center vh-100 bg-light ">
+    <section class="inicio d-flex justify-content-center align-items-center vh-100 bg-light ">
 
-      <div class="container p-1 d-flex align-items-center gap-4">
+      <div class="contenedor-Inicio container p-1 d-flex align-items-center gap-4">
         <!--Contenedor de Imagen -->
         <div class="contenedor-img d-flex justify-content-center ">
           <img src="./assets/Imagenes/logo.png" alt="Daniel Garrido">
@@ -56,6 +56,9 @@ import Servicios from './components/servicios.vue';
 </template>
 
 <style>
+
+
+
 
 /**** animacion a las redes sociales  *****/
 .animacion-redes-sociales{
@@ -118,4 +121,11 @@ import Servicios from './components/servicios.vue';
   transition: all 0.5s ease;
   color: #000 !important;
 }
+
+@media (max-width: 500px) {
+  .contenedor-Inicio{
+    flex-direction: column;
+  }
+}
+
 </style>

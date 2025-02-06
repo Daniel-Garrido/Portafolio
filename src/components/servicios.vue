@@ -2,20 +2,21 @@
 </script>
 
 <template>
-  <section class="bg-light vh-100 d-flex align-items-center">
-    <div class="container p-5">
-      <!-- Título y línea horizontal -->
-      <div class="text-center mb-5">
-        <h2>Servicios</h2>
-        <hr class="hr">
-      </div>
 
-      <!-- Contenedor de las cards -->
-      <main class="d-flex justify-content-center">
-        <!-- Card de Diseñador -->
-        <div class="bg-white p-4 text-center rounded shadow">
-          <div class="iconos mb-3">
-            <i class="fa-solid fa-pen-nib fa-2x text-primary"></i>
+<section class="bg-light  d-flex align-items-center">
+  <div class="container p-5">
+    <div class="text-center mb-5">
+      <h2 class="text-dark">Servicios</h2>
+      <hr class="hr">
+    </div>
+
+    <main class="row g-4 justify-content-center">
+      
+      <!-- card diseñador -->
+      <div class="col-md-6 col-lg-5">
+        <div class="bg-white p-5 text-center h-100 card-custom">
+          <div class=" iconos mb-3">
+            <i class="fa-solid fa-pen-nib fa-3x text-primary"></i>
           </div>
           <h3 class="mb-3">Diseñador</h3>
           <div class="text-left">
@@ -26,11 +27,13 @@
           </div>
           <a href="#" class="btn btn-primary mt-3">Cotizar Proyecto</a>
         </div>
+      </div>
 
-        <!-- Card de Desarrollador Frontend -->
-        <div class="bg-white text-black p-4 text-center rounded shadow">
+      <!-- card desarrollador web -->
+      <div class="col-md-6 col-lg-5">
+        <div class="bg-white p-5 text-center  h-100 card-custom">
           <div class="iconos mb-3">
-            <i class="fa-solid fa-code fa-2x text-primary"></i>
+            <i class="fa-solid fa-code fa-3x text-primary"></i>
           </div>
           <h3 class="mb-3">Desarrollador Frontend</h3>
           <div class="text-left">
@@ -41,10 +44,12 @@
           </div>
           <a href="#" class="btn btn-primary mt-3">Cotizar Proyecto</a>
         </div>
+      </div>
 
-      </main>
-    </div>
-  </section>
+    </main>
+  </div>
+</section>
+
 
 </template>
 
