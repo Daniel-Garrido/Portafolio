@@ -6,6 +6,7 @@
 <!-- menu de navegacion -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  
   <div class="menu-navegacion container d-flex justify-content-between align-items-center">
     
     <!-- Logo -->

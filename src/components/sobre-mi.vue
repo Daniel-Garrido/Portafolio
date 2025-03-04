@@ -10,11 +10,11 @@
     </h2>
     <hr class="hr">
 
-    <div class="row align-items-center">
+    <div class="d-flex justify-content-center align-items-center">
       <!-- Columna izquierda: texto -->
 
-      <div class="col-md-6">
-        <p>
+      <div class="container">
+        <p class="text">
           Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Mérida, actualmente
           cursando el último semestre. Mi pasión por el desarrollo web y la programación me ha llevado a especializarme
           en Desarrollo Web, con un enfoque en mejorar constantemente mis habilidades en
@@ -24,24 +24,21 @@
           innovación y el aprendizaje continuo. Algunos de mis principales intereses incluyen:
           
         </p>
-        <p>
+        <p class="text">
           Diseño de experiencias de usuario (UX) y interfaces intuitivas (UI).
           Desarrollo de aplicaciones web responsivas y optimizadas para diversos dispositivos.
           Exploración de nuevas tecnologías para impulsar soluciones creativas y eficientes.
           Siempre busco nuevos retos que me permitan crecer profesional y personalmente en el ámbito tecnológico.
         </p>
-        <p>
+        <p class="text">
           Dejo los links para poder visualizar mis proyectos y mi curriculum.
         </p>
+        
         <div class="botones-sobre-mi d-flex">
-          <a href="#" class="btn btn-primary">Proyectos</a>
-          <a href="#" class="btn btn-primary">Descargar CV</a>
+          <a href="CVDANIEL.pdf" class="btn btn-primary" download="CVDANIEL.pdf">Descargar CV</a>
         </div>
       </div>
-      <!-- Columna derecha: imagen -->
-      <div class="col-md-6 text-center">
-        <img src="https://via.placeholder.com/400x300" alt="Foto de escritorio" class="img-fluid rounded shadow" />
-      </div>
+     
     </div>
   </section>
 
@@ -58,6 +55,10 @@
   background-color: #0F97f7;
   padding: 1px;
 
+}
+.text{
+  font-size: 18px;
+  line-height: 30px;
 }
 
 </style>
