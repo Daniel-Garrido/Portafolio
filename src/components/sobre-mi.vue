@@ -3,7 +3,7 @@
 
 <template>
 
-  <section class="container my-5">
+  <section id="sobre-mi" class="container my-5">
 
     <h2 class="fw-bold mb-4 text-center">
       Sobre mí

@@ -23,28 +23,28 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active text-dark" href="#">Inicio</a>
+          <a class="nav-link active text-dark" href="#inicio">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Sobre mí</a>
+          <a class="nav-link text-dark" href="#sobre-mi">Sobre mí</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Habilidades</a>
+          <a class="nav-link text-dark" href="#habilidades">Habilidades</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Servicios</a>
+          <a class="nav-link text-dark" href="#servicios">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Proyectos</a>
+          <a class="nav-link text-dark" href="#proyectos">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Contacto</a>
+          <a class="nav-link text-dark" href="#contacto">Contacto</a>
         </li>
       </ul>
     </div>
 
     <!-- Íconos de modo oscuro y traductor -->
-    <div class=" d-none d-xl-flex ps-3">
+    <div class="iconos-moods d-none d-xl-flex ps-3">
       <i class="fas fa-moon p-2"></i>
       <i class="fas fa-language p-2"></i>
     </div>
@@ -64,6 +64,9 @@
   object-fit: cover;
 }
 
+.iconos-moods{
+  cursor: pointer;
+}
 
 
 </style>

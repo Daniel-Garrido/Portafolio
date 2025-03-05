@@ -3,14 +3,14 @@
 
 <template>
 
-<section class="bg-light  d-flex align-items-center">
+<section id="servicios" class="seccion-servicios bg-light  d-flex align-items-center">
   <div class="container p-5">
     <div class="text-center mb-5">
       <h2 class="text-dark">Servicios</h2>
       <hr class="hr">
     </div>
 
-    <main class="row g-4 justify-content-center">
+    <main class="contenedor-servicios row g-4 justify-content-center">
       
       <!-- card diseñador -->
       <div class="col-md-6 col-lg-5">
@@ -25,7 +25,7 @@
             <p><i class="fa-solid fa-check text-success"></i> Diseño de prototipos y mockups</p>
             <p><i class="fa-solid fa-check text-success"></i> Diseño de logos</p>
           </div>
-          <a href="#" class="btn btn-primary mt-3">Cotizar Proyecto</a>
+          <a href="#contacto" class="btn btn-primary mt-3">Cotizar Proyecto</a>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
             <p><i class="fa-solid fa-check text-success"></i> Optimización SEO</p>
             <p><i class="fa-solid fa-check text-success"></i> Desarrollo de landing page</p>
           </div>
-          <a href="#" class="btn btn-primary mt-3">Cotizar Proyecto</a>
+          <a href="#contacto" class="btn btn-primary mt-3">Cotizar Proyecto</a>
         </div>
       </div>
 
@@ -54,5 +54,12 @@
 </template>
 
 <style>
+
+@media (max-width: 500px){
+  .contenedor-servicios{
+  gap:30px;
+}
+
+}
 
 </style>

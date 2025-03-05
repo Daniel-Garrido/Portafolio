@@ -74,14 +74,14 @@ export default {
 
 <template>
 
-<section class="bg-light ">
+<section id="proyectos" class="bg-light ">
   <h2 class="text-center p-2">Proyectos</h2>
   <hr class="hr">
 
   <div class="container mt-4">
     <!-- Select para filtrar las categorías -->
     <div class="text-left mb-3">
-      <select v-model="seleccionarCategoria" class="form-select" @change="filtrarProyectos">
+      <select v-model="seleccionarCategoria" class="form-select " @change="filtrarProyectos">
         <option value="all">Seleccione una categoría</option>
         <option value="diseño">Diseño</option>
         <option value="programacion">Programación</option>
@@ -113,8 +113,8 @@ export default {
 
 <style>
 .card-proyectos{
-  border-radius: 0px;
   border: none;
+  border-radius: 0px;
 }
 .form-select{
   border: none;
