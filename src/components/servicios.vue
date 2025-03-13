@@ -57,7 +57,6 @@
 
 @media (max-width: 500px){
   .contenedor-servicios{
-    background-color: red;
   gap:30px;
 }
 

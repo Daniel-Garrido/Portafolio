@@ -113,6 +113,10 @@ onMounted(() => {
     font-size: 25px;
   }
 
+ 
+  .nav-item{
+    padding: 5px 5px 5px 0px;
+  }
   
 
 }
