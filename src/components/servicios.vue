@@ -13,7 +13,7 @@
     <main class="contenedor-servicios row g-4 justify-content-center">
       
       <!-- card diseñador -->
-      <div class="col-md-6 col-lg-5">
+      <div class="col-12 col-md-6 col-lg-5">
         <div class="bg-white p-5 text-center h-100 card-custom">
           <div class=" iconos mb-3">
             <i class="fa-solid fa-pen-nib fa-3x text-primary"></i>
@@ -30,8 +30,8 @@
       </div>
 
       <!-- card desarrollador web -->
-      <div class="col-md-6 col-lg-5">
-        <div class="bg-white p-5 text-center  h-100 card-custom">
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="bg-white p-5 text-center w-100  h-100 card-custom">
           <div class="iconos mb-3">
             <i class="fa-solid fa-code fa-3x text-primary"></i>
           </div>
@@ -57,8 +57,10 @@
 
 @media (max-width: 500px){
   .contenedor-servicios{
+    background-color: red;
   gap:30px;
 }
+
 
 }
 

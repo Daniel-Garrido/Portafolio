@@ -11,9 +11,10 @@
     <hr class="hr">
 
     <div class="d-flex justify-content-center align-items-center">
-      <!-- Columna izquierda: texto -->
+    
 
       <div class="container">
+        
         <p class="text">
           Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Mérida, actualmente
           cursando el último semestre. Mi pasión por el desarrollo web y la programación me ha llevado a especializarme
@@ -57,7 +58,7 @@
 
 }
 .text{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
 }
 

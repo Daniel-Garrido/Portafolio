@@ -127,8 +127,13 @@ const resetForm = () => {
 
     <!-- formulario de registro -->
     <section id="contacto">
-      <div>
-        <h2 class="mb-4 text-center">Contacto</h2>
+      <div class="p-5">
+        
+        <div class="text-center mb-5">
+          <h2 class="text-dark">Contacto</h2>
+          <hr class="hr">
+        </div>
+
         <form class="formulario_contacto" @submit.prevent="sendEmail">
           <div class="formulario_contacto_content">
             <div class="field">
@@ -306,17 +311,20 @@ const resetForm = () => {
   .contenedor-Inicio {
     flex-direction: column;
   }
-  .contenedor-info-inicio{
+
+  .contenedor-info-inicio {
     justify-content: center;
     text-align: center;
   }
-  .iconos{
+
+  .iconos {
     display: flex;
     justify-content: center;
     gap: 10px;
   }
+
   .formulario_contacto_content {
-    width: 90%;
+    width: 100%;
   }
 }
 </style>
