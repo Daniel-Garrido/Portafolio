@@ -127,6 +127,7 @@ const resetForm = () => {
 
     <!-- formulario de registro -->
     <section id="contacto">
+      
       <div class="p-5">
         
         <div class="text-center mb-5">
@@ -158,7 +159,7 @@ const resetForm = () => {
 
             <div class="field">
               <label for="emailjs_message">Cuentános más sobre tu proyecto</label>
-              <textarea v-model="form.emailjs_message" required></textarea>
+              <textarea rows="10" v-model="form.emailjs_message"required></textarea>
             </div>
 
             <div class="text-center">
@@ -177,6 +178,7 @@ const resetForm = () => {
 </template>
 
 <style>
+
 /**** animacion a las redes sociales  *****/
 .animacion-redes-sociales {
   perspective: 1000px;
@@ -281,7 +283,7 @@ const resetForm = () => {
 
   width: 60%;
   padding: 15px;
-  border: 2px solid #f8f9fa;
+  border: 1px solid #f8f9fa;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 20px;

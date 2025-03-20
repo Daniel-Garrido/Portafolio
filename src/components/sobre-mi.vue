@@ -47,6 +47,10 @@
 
 <style>
 
+section {
+  scroll-margin-top: 80px; 
+}
+
 .botones-sobre-mi a{
   margin-right: 10px;
 }

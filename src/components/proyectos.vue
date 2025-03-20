@@ -80,7 +80,7 @@ export default {
 
 <template>
 
-  <section id="proyectos" class="bg-light ">
+  <section id="proyectos" class="bg-light proyectos-section-bg">
     <!-- seccion del titulo -->
     <div class="p-5">
       <h2 class="text-center p-2">Proyectos</h2>

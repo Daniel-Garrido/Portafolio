@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 //menu de navegacion 
 onMounted(() => {
@@ -13,6 +13,19 @@ onMounted(() => {
   //evento al darle clic al menu
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
+    event.preventDefault();//evita el comportamiento por default del enlace
+    
+      //Obtener el ID de la seccion
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSeccion = document.getElementById(targetId);
+
+      //agregar scroll a los href del menu de navegacion
+      if(targetSeccion){
+        targetSeccion.scrollIntoView({
+          behavior : 'smooth',
+          block : 'start',
+        });
+      }
       
       // Cierra el menú colapsable
       const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
@@ -22,6 +35,27 @@ onMounted(() => {
     });
   });
 
+});
+
+//efecto dark
+// Variable reactiva para controlar el modo oscuro
+const isDarkMode = ref(false);
+
+// Función para cambiar de tema
+const toggleDarkMode = () => {
+  isDarkMode.value = !isDarkMode.value;
+  document.body.classList.toggle('dark-mode'); // Agrega o quita la clase 'dark-mode'
+  
+  // Guardar en localStorage para recordar la preferencia
+  localStorage.setItem('darkMode', isDarkMode.value);
+};
+
+// Verificar si el usuario ya tiene el modo oscuro activado
+onMounted(() => {
+  if (localStorage.getItem('darkMode') === 'true') {
+    isDarkMode.value = true;
+    document.body.classList.add('dark-mode');
+  }
 });
 
 </script>
@@ -71,7 +105,11 @@ onMounted(() => {
 
       <!-- Íconos de modo oscuro y traductor -->
       <div class="iconos-moods d-none d-xl-flex ps-3">
-        <i class="fas fa-moon p-2"></i>
+        <i 
+    :class="isDarkMode ? 'fas fa-sun p-2' : 'fas fa-moon p-2'"
+    @click="toggleDarkMode"
+    style="cursor: pointer; font-size: 20px;">
+  </i>
         <i class="fas fa-language p-2"></i>
       </div>
 
@@ -100,6 +138,32 @@ onMounted(() => {
 .nav-item a {
   font-weight: 600;
 }
+
+/* estilos para el modo dark*/
+.dark-mode {
+  background-color: #343A40; 
+  color: white ; 
+}
+
+.dark-mode .navbar {
+  background-color: #343A40 !important; 
+ 
+}
+
+.dark-mode .container {
+  background-color: #343A40; 
+}
+
+.dark-mode .inicio {
+  background-color: #343A40 !important; 
+}
+.dark-mode .proyectos-section-bg{
+  background-color: #343A40 !important; 
+ }
+.dark-mode .seccion-servicios{
+  background-color: #343A40 !important; 
+}
+
 
 @media(max-width: 500px) {
 
