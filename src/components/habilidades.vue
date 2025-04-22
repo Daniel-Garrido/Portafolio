@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <section id="habilidades" class="d-flex justify-content-center flex-column py-5">
+  <section id="habilidades" class=" d-flex justify-content-center flex-column py-5">
     <h2 class="text-center p-2">Habilidades</h2>
     <hr class="hr">
     
-    <div class="container bg-white py-4 px-3">
+    <div class="habilidades container bg-white py-4 px-3">
 
       <div class="row">
 

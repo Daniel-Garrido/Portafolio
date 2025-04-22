@@ -3,20 +3,18 @@
 
 <template>
 
-
-  <section id="servicios" class="seccion-servicios bg-light  d-flex align-items-center">
-    <div class="container p-5">
+  <section id="servicios" class="seccion-servicios  bg-light">
+    <div class="">
       <div class="text-center mb-5">
         <h2 class="text-dark">Servicios</h2>
         <hr class="hr">
-      </div>
+    </div>
 
-      <main class="contenedor-servicios row g-4 justify-content-center">
-
-        <!-- card diseñador -->
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="bg-white p-5 text-center h-100 card-custom">
-            <div class=" iconos mb-3">
+    <div class="seccion-servicios-content">
+      
+      <div class="seccion-servicios-content-card">
+        <div class="">
+            <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-pen-nib fa-3x text-primary"></i>
             </div>
             <h3 class="mb-3">Diseñador</h3>
@@ -27,13 +25,12 @@
               <p><i class="fa-solid fa-check text-success"></i> Diseño de logos</p>
             </div>
             <a href="#contacto" class="btn btn-primary mt-3">Cotizar Proyecto</a>
-          </div>
         </div>
-
-        <!-- card desarrollador web -->
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="bg-white p-5 text-center w-100  h-100 card-custom">
-            <div class="iconos mb-3">
+      </div>
+      
+      <div class="seccion-servicios-content-card">
+        <div class="">
+            <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-code fa-3x text-primary"></i>
             </div>
             <h3 class="mb-3">Desarrollador Frontend</h3>
@@ -45,22 +42,51 @@
             </div>
             <a href="#contacto" class="btn btn-primary mt-3">Cotizar Proyecto</a>
           </div>
-        </div>
+      </div>
 
-      </main>
-      
     </div>
-  </section>
+    </div>
+   
 
+  </section>
 
 </template>
 
 <style>
+.seccion-servicios{
+  padding: 50px;
+}
+.seccion-servicios-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap:20px;
+ 
+}
+
+.seccion-servicios-content-card{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  padding: 20px;
+  background-color: var(--color-principal);
+}
+
 @media (max-width: 500px) {
-  .contenedor-servicios {
-    gap: 30px;
+ 
+  .seccion-servicios{
+   padding: 10px;
+  }
+  
+  .seccion-servicios-content{
+  flex-direction: column;
   }
 
+  .seccion-servicios-content-card{
+    width: 100%;
+  }
 
 }
 </style>

@@ -139,16 +139,16 @@ const resetForm = () => {
           <div class="formulario_contacto_content">
             <div class="field">
               <label for="from_name">Nombre</label>
-              <input type="text" v-model="form.from_name" />
+              <input class="input" type="text" v-model="form.from_name" />
             </div>
 
             <div class="field">
               <label for="emailjs_email">Correo Electrónico</label>
-              <input type="email" v-model="form.emailjs_email" />
+              <input class="input" type="email" v-model="form.emailjs_email" />
             </div>
 
             <div class="field">
-              <label for="project_type">¿Qué servicio te interesa?</label>
+              <label class="select" for="project_type">¿Qué servicio te interesa?</label>
               <select v-model="form.project_type">
                 <option value="web">Páginas web</option>
                 <option value="movil">Diseño</option>
@@ -163,7 +163,7 @@ const resetForm = () => {
             </div>
 
             <div class="text-center">
-              <input class=" btn btn-primary" type="submit" :value="buttonText" :disabled="loading" />
+              <input class="btn btn-primary" type="submit" :value="buttonText" :disabled="loading" />
             </div>
           </div>
 
@@ -178,6 +178,14 @@ const resetForm = () => {
 </template>
 
 <style>
+
+/*Variable generales */
+:root{
+  --color-dark:#222326;
+  --color-dark-fondo: #323232;
+  --color-principal: #FFFFFF;
+
+}
 
 /**** animacion a las redes sociales  *****/
 .animacion-redes-sociales {
