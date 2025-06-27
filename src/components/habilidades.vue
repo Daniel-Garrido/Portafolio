@@ -3,7 +3,7 @@
 
 <template>
   <section id="habilidades" class=" d-flex justify-content-center flex-column py-5">
-    <h2 class="text-center p-2">Habilidades</h2>
+    <h2 class="text-center p-2 scroll-animate" data-animacion="animate__backInDown">Habilidades</h2>
     <hr class="hr">
     
     <div class="habilidades container bg-white py-4 px-3">
@@ -11,7 +11,7 @@
       <div class="row">
 
         <!-- card de diseño -->
-        <div class="card_disenio col-md-4 mb-4">
+        <div class="card_disenio col-md-4 mb-4 scroll-animate" data-animacion="animate__fadeInLeft">
 
           <div class="card p-3">
             <h3 class="text-center text-dark">Diseño</h3>
@@ -29,7 +29,7 @@
 
         <!-- card de frontend -->
 
-        <div class="card_disenio col-md-4 mb-4">
+        <div class="card_disenio col-md-4 mb-4 scroll-animate" data-animacion="animate__fadeInDown">
 
           <div class="card p-3">
             <h3 class="text-center text-dark">Frontend</h3>
@@ -58,7 +58,7 @@
         </div>
 
         <!-- card de backend -->
-        <div class="card_disenio col-md-4 mb-4">
+        <div class="card_disenio col-md-4 mb-4 scroll-animate" data-animacion="animate__fadeInRight">
           <div class="card p-3">
             <h3 class="text-center text-dark">Backend</h3>
             

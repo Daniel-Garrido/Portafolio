@@ -31,6 +31,22 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+
+  const elementos = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const animacion = el.dataset.animacion || 'animate__fadeInUp';
+        el.classList.add('animate__animated', animacion);
+        observer.unobserve(el); // Solo una vez
+      }
+    });
+  }, {
+    threshold: 0.3,
+  });
+
+  elementos.forEach((el) => observer.observe(el));
 });
 
 onUnmounted(() => {
@@ -95,24 +111,23 @@ const resetForm = () => {
     <section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-light ">
 
       <div class="contenedor-Inicio container p-1 d-flex align-items-center gap-4">
-        <!--Contenedor de Imagen -->
-        <div class="contenedor-img d-flex justify-content-center ">
-          <img src="./assets/Imagenes/logo.png" alt="Daniel Garrido">
-        </div>
+        
 
         <!--Contenedor de  Información -->
         <div class="contenedor-info-inicio w-100 container ">
-          <h1 class="mb-2">Daniel Arcángel Garrido Hoil</h1>
-          <p class="text-muted mb-3">Diseñador Web!!</p>
+          <h1 class="mb-2 scroll-animate" data-animacion="animate__backInLeft" >Daniel Arcángel Garrido Hoil</h1>
+          <p class="text-muted mb-3 scroll-animate" data-animacion="animate__backInRight" >Diseñador Web!!</p>
+
           <!-- Iconos -->
-          <div class="iconos d-flex mb-3 animacion-redes-sociales">
-            <a href="#" class="text-decoration-none me-6 "><i class="fab fa-linkedin"></i></a>
+          <div class="iconos d-flex mb-3 animacion-redes-sociales scroll-animate" data-animacion="animate__backInUp" >
+            <a href="#" class="text-decoration-none me-6 " ><i class="fab fa-linkedin"></i></a>
             <a href="#" class="text-decoration-none me-6 "><i class="fab fa-github"></i></a>
             <a href="#" class="text-decoration-none "><i class="fab fa-instagram"></i></a>
           </div>
           <!-- Botón de contacto -->
-          <a href="#" class=" btn text-white ">Contacto</a>
+          <a href="#" class=" btn text-white scroll-animate">Contacto</a>
         </div>
+       
       </div>
 
     </section>
@@ -131,7 +146,7 @@ const resetForm = () => {
       <div class="p-5">
         
         <div class="text-center mb-5">
-          <h2 class="text-dark">Contacto</h2>
+          <h2 class="text-dark scroll-animate" data-animacion="animate__backInDown">Contacto</h2>
           <hr class="hr">
         </div>
 
@@ -260,11 +275,19 @@ const resetForm = () => {
   border-radius: 50%;
 }
 
+/* estilo a la  seccion principal */
+.contenedor-info-inicio h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+/* estilo a los iconos */
 .iconos a {
   font-size: 30px;
   padding-right: 10px;
 }
 
+
+/* estilo a los botones  */
 .btn {
   padding: 5px 30px;
   background-color: #0F97F7;
@@ -291,7 +314,7 @@ const resetForm = () => {
 
   width: 60%;
   padding: 15px;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #c2c2c2;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 20px;

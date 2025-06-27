@@ -1,21 +1,119 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import emailjs from "@emailjs/browser";
+
+// Código que ya tenías para scroll y emailjs
+const showScrollButton = ref(false);
+
+const handleScroll = () => {
+  if (window.scrollY > 300) {
+    showScrollButton.value = true;
+  } else {
+    showScrollButton.value = false;
+  }
+};
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+
+  // Animaciones con IntersectionObserver + detección inicial
+  const elementos = document.querySelectorAll('.scroll-animate');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const animacion = el.dataset.animacion || 'animate__fadeInUp';
+        el.classList.add('animate__animated', animacion);
+        observer.unobserve(el);
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -100px 0px', // Detecta un poco antes de entrar
+  });
+
+  elementos.forEach((el) => observer.observe(el));
+
+  // Verificación manual para elementos ya visibles al cargar
+  elementos.forEach((el) => {
+    const bounding = el.getBoundingClientRect();
+    if (bounding.top < window.innerHeight && bounding.bottom >= 0) {
+      const animacion = el.dataset.animacion || 'animate__fadeInUp';
+      el.classList.add('animate__animated', animacion);
+      observer.unobserve(el);
+    }
+  });
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+// Variables y funciones para emailjs (sin cambios)
+const form = ref({
+  emailjs_name: "",
+  emailjs_email: "",
+  emailjs_message: "",
+});
+
+const buttonText = ref("Enviar Correo");
+const loading = ref(false);
+
+const sendEmail = async () => {
+  loading.value = true;
+  buttonText.value = "Enviando...";
+
+  try {
+    const serviceID = "default_service";
+    const templateID = "template_vy85fmg";
+    const publicKey = "Ic_0byHMDqakp2g3h";
+
+    await emailjs.send(serviceID, templateID, form.value, publicKey);
+    alert("Correo enviado con éxito 🎉");
+    resetForm();
+  } catch (error) {
+    console.error("Error al enviar el correo:", error);
+    alert("Error al enviar el correo.");
+  } finally {
+    loading.value = false;
+    buttonText.value = "Enviar Correo";
+  }
+};
+
+const resetForm = () => {
+  form.value = {
+    from_name: "",
+    emailjs_email: "",
+    emailjs_message: "",
+  };
+};
 </script>
+
 
 <template>
 
   <section id="sobre-mi" class="container my-5">
 
-    <h2 class="fw-bold mb-4 text-center">
+    <h2 class="fw-bold mb-4 text-center  scroll-animate  " data-animacion ="animate__backInDown">
       Sobre mí
     </h2>
+
     <hr class="hr">
 
     <div class="d-flex justify-content-center align-items-center">
-    
 
       <div class="container">
-        
-        <p class="text">
+
+        <p class="text scroll-animate" data-animacion="animate__backInUp">
+          
           Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Mérida, actualmente
           cursando el último semestre. Mi pasión por el desarrollo web y la programación me ha llevado a especializarme
           en Desarrollo Web, con un enfoque en mejorar constantemente mis habilidades en
@@ -23,47 +121,43 @@
 
           Me motiva crear experiencias digitales atractivas, funcionales y optimizadas, siempre con un enfoque en la
           innovación y el aprendizaje continuo. Algunos de mis principales intereses incluyen:
-          
         </p>
-        <p class="text">
+
+        <p class="text scroll-animate" data-animacion="animate__backInUp">
           Diseño de experiencias de usuario (UX) y interfaces intuitivas (UI).
           Desarrollo de aplicaciones web responsivas y optimizadas para diversos dispositivos.
           Exploración de nuevas tecnologías para impulsar soluciones creativas y eficientes.
           Siempre busco nuevos retos que me permitan crecer profesional y personalmente en el ámbito tecnológico.
         </p>
-        <p class="text">
-          Dejo los links para poder visualizar mis proyectos y mi curriculum.
-        </p>
-        
-        <div class="botones-sobre-mi d-flex">
+
+        <div class="botones-sobre-mi d-flex scroll-animate" data-animacion="animate__backInUp">
           <a href="CVDANIEL.pdf" class="btn btn-primary" download="CVDANIEL.pdf">Descargar CV</a>
         </div>
       </div>
-     
+
     </div>
   </section>
 
 </template>
 
 <style>
-
 section {
-  scroll-margin-top: 80px; 
+  scroll-margin-top: 80px;
 }
 
-.botones-sobre-mi a{
+.botones-sobre-mi a {
   margin-right: 10px;
 }
 
-.hr{
+.hr {
   width: 100px;
   background-color: #0F97f7;
   padding: 1px;
 
 }
-.text{
-  font-size: 16px;
+
+.text {
+  font-size: 18px;
   line-height: 30px;
 }
-
 </style>

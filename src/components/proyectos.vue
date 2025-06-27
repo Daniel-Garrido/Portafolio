@@ -83,7 +83,7 @@ export default {
   <section id="proyectos" class="bg-light proyectos-section-bg">
     <!-- seccion del titulo -->
     <div class="p-5">
-      <h2 class="text-center p-2">Proyectos</h2>
+      <h2 class="text-center p-2 scroll-animate" data-animacion="animate__backInDown">Proyectos</h2>
       <hr class="hr">
     </div>
 
@@ -104,7 +104,8 @@ export default {
      
         <div v-for="(project, index) in proyectosFiltrados" :key="index" class="col-md-4 mb-4">
           <!-- contenido de cada card -->
-          <div class="card card-proyectos">
+          <div class="card card-proyectos scroll-animate" data-animacion="animate__fadeInDown">
+            
             <div class="img-container">
               <img :src="project.imagen" class="card-img-top" :alt="project.titulo" />
               <div class="capa"></div> <!-- Capa superpuesta -->
@@ -142,7 +143,8 @@ export default {
 
 /* estilo a la card */
 .card-proyectos {
-  border: none;
+  
+  border: 1px solid #c2c2c2;
   border-radius: 0px;
 }
 
