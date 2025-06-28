@@ -104,7 +104,7 @@ export default {
      
         <div v-for="(project, index) in proyectosFiltrados" :key="index" class="col-md-4 mb-4">
           <!-- contenido de cada card -->
-          <div class="card card-proyectos scroll-animate" data-animacion="animate__fadeInDown">
+          <div class="card card-proyectos scroll-animate " data-animacion="animate__bounceInLeft">
             
             <div class="img-container">
               <img :src="project.imagen" class="card-img-top" :alt="project.titulo" />

@@ -98,6 +98,7 @@ const resetForm = () => {
 
 <template>
 
+  <!-- seccion principal de la pagina -->
   <div id="app">
 
     <!-- Botón de "ir arriba" -->
@@ -112,14 +113,14 @@ const resetForm = () => {
 
       <div class="contenedor-Inicio container p-1 d-flex align-items-center gap-4">
         
-
         <!--Contenedor de  Información -->
         <div class="contenedor-info-inicio w-100 container ">
-          <h1 class="mb-2 scroll-animate" data-animacion="animate__backInLeft" >Daniel Arcángel Garrido Hoil</h1>
+          
+          <h1 class="mb-2 scroll-animate" data-animacion="animate__backInUp" >Daniel Arcángel Garrido Hoil</h1>
           <p class="text-muted mb-3 scroll-animate" data-animacion="animate__backInRight" >Diseñador Web!!</p>
 
           <!-- Iconos -->
-          <div class="iconos d-flex mb-3 animacion-redes-sociales scroll-animate" data-animacion="animate__backInUp" >
+          <div class="iconos d-flex mb-3 animacion-redes-sociales scroll-animate" data-animacion="animate__backInDown" >
             <a href="#" class="text-decoration-none me-6 " ><i class="fab fa-linkedin"></i></a>
             <a href="#" class="text-decoration-none me-6 "><i class="fab fa-github"></i></a>
             <a href="#" class="text-decoration-none "><i class="fab fa-instagram"></i></a>
@@ -143,7 +144,7 @@ const resetForm = () => {
     <!-- formulario de registro -->
     <section id="contacto">
       
-      <div class="p-5">
+      <div class="p-5 formulario_contacto_contenedor">
         
         <div class="text-center mb-5">
           <h2 class="text-dark scroll-animate" data-animacion="animate__backInDown">Contacto</h2>
@@ -341,6 +342,8 @@ const resetForm = () => {
 
 /*************** media querys *****************/
 @media (max-width: 500px) {
+  
+  /* responsive design al contenedor de inicio */
   .contenedor-Inicio {
     flex-direction: column;
   }
@@ -350,12 +353,23 @@ const resetForm = () => {
     text-align: center;
   }
 
+  .contenedor-info-inicio h1{
+    font-size: 2.5rem;
+  }
+
+  /* responsive design a los iconos */
   .iconos {
     display: flex;
     justify-content: center;
     gap: 10px;
   }
 
+  /* responsive design al formulario */
+  .formulario_contacto_contenedor{
+    padding: 10px !important;
+    padding-top: 50px !important;
+   
+  }
   .formulario_contacto_content {
     width: 100%;
   }

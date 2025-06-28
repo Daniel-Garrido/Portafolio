@@ -4,15 +4,20 @@
 <template>
 
   <section id="servicios" class="seccion-servicios  bg-light">
+    
+    <!-- contenedor principal -->
     <div class="">
+      <!-- contenedor del texto del encabezado -->
       <div class="text-center mb-5">
         <h2 class="text-dark scroll-animate" data-animacion="animate__backInDown">Servicios</h2>
         <hr class="hr">
       </div>
 
+      <!-- contenedor de la seccion de las card -->
       <div class="seccion-servicios-content">
 
-        <div class="seccion-servicios-content-card scroll-animate" data-animacion="animate__backInUp">
+        <!-- card 1 -->
+        <div class="seccion-servicios-content-card scroll-animate" data-animacion="animate__backInLeft">
           <div class="">
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-pen-nib fa-3x text-primary"></i>
@@ -28,7 +33,8 @@
           </div>
         </div>
 
-        <div class="seccion-servicios-content-card scroll-animate" data-animacion="animate__backInDown">
+        <!-- card 2 -->
+        <div class="seccion-servicios-content-card scroll-animate" data-animacion="animate__backInRight">
           <div class="">
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-code fa-3x text-primary"></i>
@@ -53,6 +59,7 @@
 </template>
 
 <style>
+
 .seccion-servicios {
   padding: 50px;
 }
@@ -77,7 +84,7 @@
 @media (max-width: 500px) {
 
   .seccion-servicios {
-    padding: 10px;
+    padding: 15px;
   }
 
   .seccion-servicios-content {
@@ -86,6 +93,15 @@
 
   .seccion-servicios-content-card {
     width: 100%;
+    border: 1px solid #c2c2c2;
+  }
+ 
+  .seccion-servicios-content-card h3{
+    text-align: center;
+    font-size: 20px;
+  }
+  .seccion-servicios-content-card p{
+    font-size: 16px !important;
   }
 
 }

@@ -100,7 +100,7 @@ const resetForm = () => {
 
 <template>
 
-  <section id="sobre-mi" class="container my-5">
+  <section id="sobre-mi" class="seccion-sobre-mi-content container my-5">
 
     <h2 class="fw-bold mb-4 text-center  scroll-animate  " data-animacion ="animate__backInDown">
       Sobre mí
@@ -110,7 +110,7 @@ const resetForm = () => {
 
     <div class="d-flex justify-content-center align-items-center">
 
-      <div class="container">
+      <div class="seccion-sobre-mi-content-info container">
 
         <p class="text scroll-animate" data-animacion="animate__backInUp">
           
@@ -141,6 +141,7 @@ const resetForm = () => {
 </template>
 
 <style>
+
 section {
   scroll-margin-top: 80px;
 }
@@ -159,5 +160,18 @@ section {
 .text {
   font-size: 18px;
   line-height: 30px;
+}
+
+@media(max-width: 500px){
+  .seccion-sobre-mi-content{
+    padding: 15px;
+  }
+  .seccion-sobre-mi-content-info{
+    padding: 0px;
+   
+  }
+  .text {
+  font-size: 16px;
+  }
 }
 </style>
