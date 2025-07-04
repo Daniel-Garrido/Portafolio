@@ -6,10 +6,11 @@ import Proyectos from './components/proyectos.vue';
 import Habilidades from './components/habilidades.vue';
 import Footer from './components/footer.vue';
 import Servicios from './components/servicios.vue';
+import Formulario from './components/formulario.vue';
+
 
 // Importar funciones de Vue y la librería de emailjs
 import { ref, onMounted, onUnmounted } from 'vue';
-import emailjs from "@emailjs/browser";
 
 //*** Botón para redireccionar al inicio ***//
 const showScrollButton = ref(false);
@@ -53,48 +54,8 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
-//*** Variables reactivas para el formulario ***//
-const form = ref({
-  emailjs_name: "",
-  emailjs_email: "",
-  emailjs_message: "",
-});
 
-const buttonText = ref("Enviar Correo");
-const loading = ref(false);
-
-// Función para enviar el correo
-const sendEmail = async () => {
-  loading.value = true;
-  buttonText.value = "Enviando...";
-
-  try {
-    const serviceID = "default_service";
-    const templateID = "template_vy85fmg";
-    const publicKey = "Ic_0byHMDqakp2g3h"; // ⚠️ Usa tu propia clave pública
-
-    await emailjs.send(serviceID, templateID, form.value, publicKey);
-    alert("Correo enviado con éxito 🎉");
-    resetForm();
-  } catch (error) {
-    console.error("Error al enviar el correo:", error);
-    alert("Error al enviar el correo.");
-  } finally {
-    loading.value = false;
-    buttonText.value = "Enviar Correo";
-  }
-};
-
-// Función para limpiar el formulario
-const resetForm = () => {
-  form.value = {
-    from_name: "",
-    emailjs_email: "",
-    emailjs_message: "",
-  };
-};
 </script>
-
 
 <template>
 
@@ -134,61 +95,11 @@ const resetForm = () => {
     </section>
 
     <SobreMi />
-
     <Proyectos />
-
     <Habilidades />
-
     <Servicios />
-
-    <!-- formulario de registro -->
-    <section id="contacto">
-      
-      <div class="p-5 formulario_contacto_contenedor">
-        
-        <div class="text-center mb-5">
-          <h2 class="text-dark scroll-animate" data-animacion="animate__backInDown">Contacto</h2>
-          <hr class="hr">
-        </div>
-
-        <form class="formulario_contacto" @submit.prevent="sendEmail">
-          <div class="formulario_contacto_content">
-            <div class="field">
-              <label for="from_name">Nombre</label>
-              <input class="input" type="text" v-model="form.from_name" />
-            </div>
-
-            <div class="field">
-              <label for="emailjs_email">Correo Electrónico</label>
-              <input class="input" type="email" v-model="form.emailjs_email" />
-            </div>
-
-            <div class="field">
-              <label class="select" for="project_type">¿Qué servicio te interesa?</label>
-              <select v-model="form.project_type">
-                <option value="web">Páginas web</option>
-                <option value="movil">Diseño</option>
-                <option value="software">Programación</option>
-              </select>
-            </div>
-
-
-            <div class="field">
-              <label for="emailjs_message">Cuentános más sobre tu proyecto</label>
-              <textarea rows="10" v-model="form.emailjs_message"required></textarea>
-            </div>
-
-            <div class="text-center">
-              <input class="btn btn-primary" type="submit" :value="buttonText" :disabled="loading" />
-            </div>
-          </div>
-
-        </form>
-      </div>
-    </section>
-
+    <Formulario />
     <Footer />
-
   </div>
 
 </template>
@@ -200,7 +111,14 @@ const resetForm = () => {
   --color-dark:#222326;
   --color-dark-fondo: #323232;
   --color-principal: #FFFFFF;
+}
 
+h1, h2{
+   font-family: 'Open Sans', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
 }
 
 /**** animacion a las redes sociales  *****/
@@ -281,6 +199,7 @@ const resetForm = () => {
   font-size: 3.5rem;
   font-weight: bold;
 }
+
 /* estilo a los iconos */
 .iconos a {
   font-size: 30px;
@@ -295,48 +214,12 @@ const resetForm = () => {
   border: 1px solid #0F97F7;
   border-radius: 0px;
   transition: all 0.5s ease;
-
 }
 
 .btn:hover {
   background-color: white;
   transition: all 0.5s ease;
   color: #000 !important;
-}
-
-/******formulario de contacto********/
-.formulario_contacto {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.formulario_contacto_content {
-
-  width: 60%;
-  padding: 15px;
-  border: 1px solid #c2c2c2;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-
-}
-
-.field {
-  margin-bottom: 10px;
-}
-
-.field label {
-  display: block;
-  font-size: 16px;
-}
-
-.field input,
-.field textarea {
-  display: block;
-  width: 100%;
-  line-height: 1.5;
-  font-size: 16px;
 }
 
 
@@ -364,14 +247,6 @@ const resetForm = () => {
     gap: 10px;
   }
 
-  /* responsive design al formulario */
-  .formulario_contacto_contenedor{
-    padding: 10px !important;
-    padding-top: 50px !important;
-   
-  }
-  .formulario_contacto_content {
-    width: 100%;
-  }
+
 }
 </style>

@@ -12,7 +12,7 @@ onMounted(() => {
 
   //evento al darle clic al menu
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
       event.preventDefault();//evita el comportamiento por default del enlace
 
       //Obtener el ID de la seccion
@@ -62,7 +62,6 @@ onMounted(() => {
 <template>
 
   <!-- menu de navegacion -->
-
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
 
     <div class="menu-navegacion container d-flex justify-content-between align-items-center">
@@ -79,7 +78,7 @@ onMounted(() => {
       </button>
 
       <!-- Contenido del Menú -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div class="contenedor-menu-navbar collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a id="link-inicio" class="nav-link active text-dark" href="#inicio">Inicio</a>
@@ -100,14 +99,13 @@ onMounted(() => {
             <a id="link-contacto" class="nav-link text-dark" href="#contacto">Contacto</a>
           </li>
         </ul>
-      </div>
 
-      <!-- Íconos de modo oscuro y traductor -->
-      <div class="iconos-moods d-none d-xl-flex ps-3">
-        <i :class="isDarkMode ? 'fas fa-sun p-2' : 'fas fa-moon p-2'" @click="toggleDarkMode"
-          style="cursor: pointer; font-size: 20px;">
-        </i>
-        <i class="fas fa-language p-2"></i>
+        <!-- Íconos de modo oscuro y traductor -->
+        <div class="iconos-moods  d-lg-flex ps-3">
+          <i :class="isDarkMode ? 'fas fa-sun p-2' : 'fas fa-moon p-2'" @click="toggleDarkMode"></i>
+          <i class="fas fa-language p-2"></i>
+        </div>
+
       </div>
 
     </div>
@@ -116,26 +114,46 @@ onMounted(() => {
 </template>
 
 <style>
-
 .menu-navegacion img {
   width: 50px;
   height: 50px;
+  border-radius: 50px;
   object-fit: cover;
 }
+
 
 .iconos-moods {
   cursor: pointer;
 }
 
+
 .navbar-nav {
   font-size: 18px;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  padding-top: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.navbar-nav .nav-link:hover {
+  border-bottom: 2px solid #0F97F7;
+  transition: all 0.3s ease;
 }
 
 .nav-item a {
   font-weight: 600;
 }
 
-/* estilos para el modo dark*/
+.nav-item a:hover {
+  transition: all 0.3s ease;
+  color: #0F97F7 !important;
+}
+
+
+/******* estilos para el modo dark **************/
 .dark-mode {
   background-color: var(--color-dark-fondo);
   color: white;
@@ -145,9 +163,11 @@ onMounted(() => {
 .dark-mode h2 {
   color: var(--color-principal) !important;
 }
-.dark-mode h3{
+
+.dark-mode h3 {
   color: var(--color-principal) !important;
 }
+
 /* color del text */
 .dark-mode p {
   color: var(--color-principal) !important;
@@ -158,6 +178,7 @@ onMounted(() => {
   background-color: var(--color-dark-fondo) !important;
   color: white;
 }
+
 .dark-mode .nav-link {
   color: var(--color-principal) !important;
 }
@@ -172,40 +193,46 @@ onMounted(() => {
 .dark-mode .proyectos-section-bg {
   background-color: var(--color-dark) !important;
 }
-.dark-mode .card-proyectos{
+
+.dark-mode .card-proyectos {
   background-color: var(--color-dark-fondo) !important;
 }
 
 /* seccion de habilidades */
-.dark-mode .habilidades{
+.dark-mode .habilidades {
   background-color: var(--color-dark-fondo) !important;
 }
 
-.dark-mode .card{
+.dark-mode .card {
   background-color: var(--color-dark-fondo) !important;
   border: 1px solid var(--color-principal);
 }
+
 /* seccion de servicios */
 .dark-mode .seccion-servicios {
   background-color: var(--color-dark) !important;
 }
 
-.dark-mode .seccion-servicios-content-card{
+.dark-mode .seccion-servicios-content-card {
   background-color: var(--color-dark) !important;
   border: 1px solid var(--color-principal);
 }
-.dark-mode .footer{
+
+.dark-mode .footer {
   background-color: var(--color-dark) !important;
 }
+
 .dark-mode .input {
   background-color: var(--color-dark-fondo) !important;
   border: 1px solid var(--color-principal);
   color: var(--color-principal) !important;
 }
-.dark-mode .p-5{
+
+.dark-mode .p-5 {
   padding: 15px !important;
 }
-/********  responsive design ***********/
+
+/***************  responsive design *****************/
 @media(max-width: 500px) {
 
   .navbar-toggler {

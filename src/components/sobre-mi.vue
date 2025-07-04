@@ -22,35 +22,6 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-
-  // Animaciones con IntersectionObserver + detección inicial
-  const elementos = document.querySelectorAll('.scroll-animate');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const animacion = el.dataset.animacion || 'animate__fadeInUp';
-        el.classList.add('animate__animated', animacion);
-        observer.unobserve(el);
-      }
-    });
-  }, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -100px 0px', // Detecta un poco antes de entrar
-  });
-
-  elementos.forEach((el) => observer.observe(el));
-
-  // Verificación manual para elementos ya visibles al cargar
-  elementos.forEach((el) => {
-    const bounding = el.getBoundingClientRect();
-    if (bounding.top < window.innerHeight && bounding.bottom >= 0) {
-      const animacion = el.dataset.animacion || 'animate__fadeInUp';
-      el.classList.add('animate__animated', animacion);
-      observer.unobserve(el);
-    }
-  });
 });
 
 onUnmounted(() => {
