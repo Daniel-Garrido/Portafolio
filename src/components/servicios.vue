@@ -9,7 +9,7 @@
     <div class="">
       <!-- contenedor del texto del encabezado -->
       <div class="text-center mb-5">
-        <h2 class="text-dark scroll-animate" data-animacion="animate__backInDown">Servicios</h2>
+        <h2 class="text-dark " >Servicios</h2>
         <hr class="hr">
       </div>
 
@@ -17,7 +17,7 @@
       <div class="seccion-servicios-content">
 
         <!-- card 1 -->
-        <div class="seccion-servicios-content-card scroll-animate" data-animacion="animate__backInLeft">
+        <div class="seccion-servicios-content-card " >
           <div class="">
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-pen-nib fa-3x text-primary"></i>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- card 2 -->
-        <div class="seccion-servicios-content-card scroll-animate" data-animacion="animate__backInRight">
+        <div class="seccion-servicios-content-card " >
           <div class="">
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-code fa-3x text-primary"></i>
@@ -76,13 +76,20 @@
   width: 40%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   gap: 20px;
   padding: 20px;
   background-color: var(--color-principal);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.seccion-servicios-content-card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .seccion-servicios-content-card p{
-   font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #686a6f;
 }

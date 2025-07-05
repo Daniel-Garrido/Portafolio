@@ -48,25 +48,10 @@ onMounted(() => {
 
   window.addEventListener('scroll', handleScroll);
   
-
-  const elementos = document.querySelectorAll('.scroll-animate');
-    const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const animacion = el.dataset.animacion || 'animate__fadeInUp';
-        el.classList.add('animate__animated', animacion);
-        observer.unobserve(el); // Solo una vez
-      }
-    });
-  }, {
-    threshold: 0.3,
-  });
-
-  elementos.forEach((el) => observer.observe(el));
 });
 
 onUnmounted(() => {
+  typeWriter(fullName, 120);
   window.removeEventListener('scroll', handleScroll);
 });
 
@@ -93,17 +78,17 @@ onUnmounted(() => {
         <!--Contenedor de  Información -->
         <div class="contenedor-info-inicio w-100 container ">
           
-          <h1 class="mb-2 scroll-animate" data-animacion="animate__backInUp" >{{ typedName }}</h1>
-          <p class="text-muted mb-3 scroll-animate" data-animacion="animate__backInRight" >Diseñador Web!!</p>
+          <h1 class="mb-2 "  >{{ typedName }}</h1>
+          <p class="text-muted mb-3 "  >Diseñador Web!!</p>
 
           <!-- Iconos -->
-          <div class="iconos d-flex mb-3 animacion-redes-sociales scroll-animate" data-animacion="animate__backInDown" >
+          <div class="iconos d-flex mb-3 animacion-redes-sociales " >
             <a href="#" class="text-decoration-none me-6 " ><i class="fab fa-linkedin"></i></a>
             <a href="#" class="text-decoration-none me-6 "><i class="fab fa-github"></i></a>
             <a href="#" class="text-decoration-none "><i class="fab fa-instagram"></i></a>
           </div>
           <!-- Botón de contacto -->
-          <a href="#" class=" btn text-white scroll-animate">Contacto</a>
+          <a href="#" class=" btn text-white">Contacto</a>
         </div>
        
       </div>

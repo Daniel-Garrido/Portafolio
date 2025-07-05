@@ -51,20 +51,22 @@ const resetForm = () => {
   <section id="contacto">
     <div class="p-5 formulario_contacto_contenedor">
       <div class="text-center mb-5">
-        <h2 class="text-dark scroll-animate" data-animacion="animate__backInDown">Contacto</h2>
+        <h2 class="text-dark ">Contacto</h2>
         <hr class="hr">
       </div>
 
+      <!-- Inicio del formulario -->
       <form class="formulario_contacto" @submit.prevent="sendEmail">
         <div class="formulario_contacto_content">
+          
           <div class="field">
-            <label for="from_name">Nombre</label>
-            <input class="input" type="text" v-model="form.from_name" />
+            <label for="from_name"></label>
+            <input class="input" type="text" placeholder="Ingresa tu nombre" v-model="form.from_name" />
           </div>
 
           <div class="field">
-            <label for="emailjs_email">Correo Electrónico</label>
-            <input class="input" type="email" v-model="form.emailjs_email" />
+            <label for="emailjs_email" ></label>
+            <input class="input" type="email" placeholder="Correo electrónico" v-model="form.emailjs_email" />
           </div>
 
           <div class="field">
@@ -78,7 +80,7 @@ const resetForm = () => {
 
           <div class="field">
             <label for="emailjs_message">Cuéntanos más sobre tu proyecto</label>
-            <textarea rows="10" v-model="form.emailjs_message" required></textarea>
+            <textarea rows="5" v-model="form.emailjs_message" required></textarea>
           </div>
 
           <div class="text-center">
@@ -92,6 +94,7 @@ const resetForm = () => {
 
 <style>
 /******formulario de contacto********/
+
 .formulario_contacto {
   width: 100%;
   display: flex;
@@ -99,23 +102,47 @@ const resetForm = () => {
 }
 
 .formulario_contacto_content {
-
-  width: 60%;
-  padding: 15px;
+  width: 50%;
+  padding: 15px 30px 15px 30px;
   border: 1px solid #c2c2c2;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-
 }
 
 .field {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
+
 
 .field label {
   display: block;
   font-size: 16px;
+  padding: 10px 10px 0px 0px;
+}
+
+
+.field input{
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 10px 10px 0px 0px;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.field input:focus,
+.field input:hover {
+  outline: none;
+  box-shadow: none;
+}
+
+.field select{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c2c2c2;
+}
+.field select:focus,
+.field select:hover{
+  outline: none;
+  box-shadow: none;
 }
 
 .field input,
@@ -126,7 +153,17 @@ const resetForm = () => {
   font-size: 16px;
 }
 
-@media (max-width: 500px){
+.field textarea{
+   border: 1px solid #c2c2c2;
+}
+
+.field textarea:focus,
+.field textarea:hover{
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 700px){
   
   /* responsive design al formulario */
   .formulario_contacto_contenedor{
