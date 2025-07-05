@@ -129,8 +129,10 @@ section {
 }
 
 .text {
+  color: #686a6f;
   font-size: 18px;
   line-height: 30px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media(max-width: 500px){

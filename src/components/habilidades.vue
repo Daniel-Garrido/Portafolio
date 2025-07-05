@@ -53,6 +53,11 @@
               <i class="fab fa-vuejs me-2"></i>
               <p class="mb-2">Vue js</p>
             </div>
+            
+            <div class="contenedor-info d-flex align-items-center mt-2">
+              <i class="fab fa-react me-2"></i>
+              <p class="mb-2">React</p>
+            </div>
 
           </div>
         </div>
@@ -65,6 +70,10 @@
             <div class="contenedor-info d-flex align-items-center mt-2">
               <img src="/iconos/java.png" alt="">
               <p class="mb-0">Java</p>
+            </div>
+            <div class="contenedor-info d-flex align-items-center mt-2">
+              <i class="fas fa-server me-2"></i>
+              <p class="mb-0">SpringBoot</p>
             </div>
 
             <div class="contenedor-info d-flex align-items-center mt-2">
@@ -95,6 +104,7 @@
 }
 .card_disenio .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ 
 }
 
 .card_disenio .card:hover {
@@ -106,6 +116,11 @@
   padding: 5px;
   gap: 10px;
   cursor: pointer;
+}
+.contenedor-info p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #686a6f;
 }
 
 /* estilos a los iconos de tecnologías */

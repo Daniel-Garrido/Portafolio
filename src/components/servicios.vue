@@ -81,6 +81,12 @@
   background-color: var(--color-principal);
 }
 
+.seccion-servicios-content-card p{
+   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #686a6f;
+}
+
 @media (max-width: 500px) {
 
   .seccion-servicios {

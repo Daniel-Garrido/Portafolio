@@ -12,6 +12,19 @@ import Formulario from './components/formulario.vue';
 // Importar funciones de Vue y la librería de emailjs
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const fullName = "Daniel Arcángel Garrido Hoil";
+const typedName = ref ("");
+
+const typeWriter = (text, delay = 100) =>{
+  let index = 0;
+  const interval = setInterval(()=>{
+    typedName.value += text.charAt(index);
+    index++;
+    if(index === text.length){
+      clearInterval(interval);
+    }
+  },delay);
+}
 //*** Botón para redireccionar al inicio ***//
 const showScrollButton = ref(false);
 
@@ -31,7 +44,10 @@ const scrollToTop = () => {
 };
 
 onMounted(() => {
+  typeWriter(fullName, 120);
+
   window.addEventListener('scroll', handleScroll);
+  
 
   const elementos = document.querySelectorAll('.scroll-animate');
     const observer = new IntersectionObserver((entries) => {
@@ -77,7 +93,7 @@ onUnmounted(() => {
         <!--Contenedor de  Información -->
         <div class="contenedor-info-inicio w-100 container ">
           
-          <h1 class="mb-2 scroll-animate" data-animacion="animate__backInUp" >Daniel Arcángel Garrido Hoil</h1>
+          <h1 class="mb-2 scroll-animate" data-animacion="animate__backInUp" >{{ typedName }}</h1>
           <p class="text-muted mb-3 scroll-animate" data-animacion="animate__backInRight" >Diseñador Web!!</p>
 
           <!-- Iconos -->
