@@ -62,7 +62,7 @@ onMounted(() => {
 <template>
 
   <!-- menu de navegacion -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
 
     <div class="menu-navegacion container d-flex justify-content-between align-items-center">
 
@@ -74,7 +74,7 @@ onMounted(() => {
       <!-- Botón para el menú colapsable -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon text-white"></span>
       </button>
 
       <!-- Contenido del Menú -->
@@ -114,6 +114,7 @@ onMounted(() => {
 </template>
 
 <style>
+
 .menu-navegacion img {
   width: 50px;
   height: 50px;
@@ -121,15 +122,14 @@ onMounted(() => {
   object-fit: cover;
 }
 
-
 .iconos-moods {
   cursor: pointer;
 }
 
-
 .navbar-nav {
   font-size: 18px;
 }
+
 
 .navbar-nav .nav-link {
   position: relative;
@@ -150,86 +150,6 @@ onMounted(() => {
 .nav-item a:hover {
   transition: all 0.3s ease;
   color: #0F97F7 !important;
-}
-
-
-/******* estilos para el modo dark **************/
-.dark-mode {
-  background-color: var(--color-dark-fondo);
-  color: white;
-}
-
-/* color de subtitulos */
-.dark-mode h2 {
-  color: var(--color-principal) !important;
-}
-
-.dark-mode h3 {
-  color: var(--color-principal) !important;
-}
-
-/* color del text */
-.dark-mode p {
-  color: var(--color-principal) !important;
-}
-
-/* estilo al menu de navegacion */
-.dark-mode .navbar {
-  background-color: var(--color-dark-fondo) !important;
-  color: white;
-}
-
-.dark-mode .nav-link {
-  color: var(--color-principal) !important;
-}
-
-/* seccion de inicio */
-.dark-mode .inicio {
-  background-color: var(--color-dark) !important;
-  color: var(--color-principal);
-}
-
-/* seccion de proyectos */
-.dark-mode .proyectos-section-bg {
-  background-color: var(--color-dark) !important;
-}
-
-.dark-mode .card-proyectos {
-  background-color: var(--color-dark-fondo) !important;
-}
-
-/* seccion de habilidades */
-.dark-mode .habilidades {
-  background-color: var(--color-dark-fondo) !important;
-}
-
-.dark-mode .card {
-  background-color: var(--color-dark-fondo) !important;
-  border: 1px solid var(--color-principal);
-}
-
-/* seccion de servicios */
-.dark-mode .seccion-servicios {
-  background-color: var(--color-dark) !important;
-}
-
-.dark-mode .seccion-servicios-content-card {
-  background-color: var(--color-dark) !important;
-  border: 1px solid var(--color-principal);
-}
-
-.dark-mode .footer {
-  background-color: var(--color-dark) !important;
-}
-
-.dark-mode .input {
-  background-color: var(--color-dark-fondo) !important;
-  border: 1px solid var(--color-principal);
-  color: var(--color-principal) !important;
-}
-
-.dark-mode .p-5 {
-  padding: 15px !important;
 }
 
 /***************  responsive design *****************/

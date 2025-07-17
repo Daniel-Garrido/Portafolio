@@ -91,8 +91,6 @@
 
     </div>
 
-
-
   </section>
 </template>
 
@@ -154,7 +152,6 @@
 .fab.fa-php {
   color: #8993be;
 }
-
 
 .card_disenio img {
   width: 20px;

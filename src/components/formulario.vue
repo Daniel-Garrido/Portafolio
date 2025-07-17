@@ -70,8 +70,8 @@ const resetForm = () => {
           </div>
 
           <div class="field">
-            <label class="select" for="project_type">¿Qué servicio te interesa?</label>
             <select v-model="form.project_type">
+              <option disabled selected value="">¿Qué servicio te interesa?</option>
               <option value="web">Páginas web</option>
               <option value="movil">Diseño</option>
               <option value="software">Programación</option>
@@ -135,9 +135,11 @@ const resetForm = () => {
 }
 
 .field select{
+  
   width: 100%;
   border: none;
   border-bottom: 1px solid #c2c2c2;
+ 
 }
 .field select:focus,
 .field select:hover{

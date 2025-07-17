@@ -1,0 +1,105 @@
+/*Variable generales */
+:root{
+  --color-dark:#222326;
+  --color-dark-fondo: #323232;
+  --color-principal: #FFFFFF;
+}
+
+h1, h2{
+   font-family: 'Open Sans', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/******* estilos para el modo dark **************/
+.dark-mode {
+  background-color: var(--color-dark-fondo);
+  color: white;
+}
+
+.dark-mode .btn:hover {
+  background-color: var(--color-dark-fondo) !important;
+  color: white !important;
+}
+
+/* color de subtitulos */
+.dark-mode h2 {
+  color: var(--color-principal) !important;
+}
+
+.dark-mode h3 {
+  color: var(--color-principal) !important;
+}
+
+/* color del text */
+.dark-mode p {
+  color: var(--color-principal) !important;
+}
+
+/****seccion menu de navegacion ********/
+.dark-mode .navbar {
+  background-color: var(--color-dark-fondo) !important;
+  color: white;
+}
+
+.dark-mode .nav-link {
+  color: var(--color-principal) !important;
+  border: 2px solid var(--color-dark-fondo) !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  border-bottom: 2px solid #0F97F7 !important;
+}
+
+
+/**** seccion de inicio ********/
+.dark-mode .inicio {
+  background-color: var(--color-dark) !important;
+  color: var(--color-principal);
+}
+
+/***** seccion de proyectos ******/
+.dark-mode .proyectos-section-bg {
+  background-color: var(--color-dark) !important;
+}
+
+.dark-mode .card-proyectos {
+  background-color: var(--color-dark-fondo) !important;
+}
+
+/****** seccion de habilidades ****/
+.dark-mode .habilidades {
+  background-color: var(--color-dark-fondo) !important;
+}
+
+.dark-mode .card {
+  background-color: var(--color-dark-fondo) !important;
+  border: 1px solid var(--color-principal);
+}
+
+/**** seccion de servicios *****/
+.dark-mode .seccion-servicios {
+  background-color: var(--color-dark) !important;
+}
+
+.dark-mode .seccion-servicios-content-card {
+  background-color: var(--color-dark) !important;
+  border: 1px solid var(--color-principal);
+}
+
+/******* seccion de pie de pagina *********/
+.dark-mode .footer {
+  background-color: var(--color-dark) !important;
+}
+
+.dark-mode .input {
+  background-color: var(--color-dark-fondo) !important;
+  border: 1px solid var(--color-principal);
+  color: var(--color-principal) !important;
+}
+
+.dark-mode .p-5 {
+  padding: 15px !important;
+}
