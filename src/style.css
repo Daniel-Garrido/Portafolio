@@ -13,6 +13,40 @@ p{
     font-family: 'Open Sans', sans-serif;
 }
 
+/**** animacion a las redes sociales  *****/
+.animacion-redes-sociales {
+  perspective: 1000px;
+}
+
+/* Estilo base para los íconos */
+.animacion-redes-sociales i {
+  font-size: 30px;
+  transition: transform 0.8s ease, color 0.8s ease;
+  display: inline-block;
+}
+
+/* Efecto 3D al hacer hover */
+.animacion-redes-sociales i:hover {
+  transform: rotateY(360deg);
+}
+
+/*estilos para los iconos de las redes sociales  */
+
+.iconos a:nth-child(1) i {
+  color: #0077b5;
+}
+
+.iconos a:nth-child(2) i {
+  color: #333333;
+}
+
+.iconos a:nth-child(3) i {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /******* estilos para el modo dark **************/
 .dark-mode {
   background-color: var(--color-dark-fondo);

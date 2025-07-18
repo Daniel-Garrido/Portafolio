@@ -37,6 +37,11 @@
   justify-content: left !important;
 }
 
+.contenedor-copryrigth{
+  padding: 20px;
+  border-top: 1px solid white;
+}
+
 .contenedor-copryrigth p{
   font-size: 14px;
   font-weight: 100;

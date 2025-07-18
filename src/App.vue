@@ -1,13 +1,6 @@
 <script setup>
 // Importar los componentes al archivo principal
 import Header from './components/header.vue';
-import SobreMi from './components/sobre-mi.vue';
-import Proyectos from './components/proyectos.vue';
-import Habilidades from './components/habilidades.vue';
-import Footer from './components/footer.vue';
-import Servicios from './components/servicios.vue';
-import Formulario from './components/formulario.vue';
-
 
 // Importar funciones de Vue y la librería de emailjs
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -62,7 +55,9 @@ onUnmounted(() => {
   <!-- seccion principal de la pagina -->
   <div id="app"> <!-- Botón de "ir arriba" --> <a href="#inicio" id="scrollToTop" class="btn-arriba "
       v-show="showScrollButton" @click.prevent="scrollToTop"> <i class="fas fa-arrow-up" aria-hidden="true"></i> </a>
+    
     <Header /> <!-- seccion de inicio -->
+    
     <section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-light ">
       <div class="contenedor-Inicio container p-1 d-flex align-items-center gap-4"> <!--Contenedor de  Información -->
         <div class="contenedor-info-inicio w-100 container ">
@@ -78,6 +73,7 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
+
   </div>
 
   <router-view />
@@ -85,38 +81,6 @@ onUnmounted(() => {
 </template>
 
 <style>
-/**** animacion a las redes sociales  *****/
-.animacion-redes-sociales {
-  perspective: 1000px;
-}
-
-/* Estilo base para los íconos */
-.animacion-redes-sociales i {
-  font-size: 30px;
-  transition: transform 0.8s ease, color 0.8s ease;
-  display: inline-block;
-}
-
-/* Efecto 3D al hacer hover */
-.animacion-redes-sociales i:hover {
-  transform: rotateY(360deg);
-}
-
-/*estilos para los iconos de las redes sociales  */
-
-.iconos a:nth-child(1) i {
-  color: #0077b5;
-}
-
-.iconos a:nth-child(2) i {
-  color: #333333;
-}
-
-.iconos a:nth-child(3) i {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* estilo a los botones  */
 .btn {

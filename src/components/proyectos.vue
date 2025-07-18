@@ -1,11 +1,11 @@
 <script>
-import proyectosData from '../data/proyectosData.js' // ✅ importar los datos
+import proyectosData from '../data/proyectosData.js'
 
 export default {
   data() {
     return {
       seleccionarCategoria: "all",
-      proyectos: proyectosData, // ✅ asignar directamente
+      proyectos: proyectosData,
       proyectosFiltrados: []
     };
   },
@@ -196,7 +196,6 @@ export default {
 .card-contenedor-iconos i {
   font-size: 20px;
 }
-
 
 /************ media querys *************/
 @media(max-width: 600px) {
