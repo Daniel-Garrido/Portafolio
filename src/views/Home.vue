@@ -5,9 +5,11 @@ import Servicios from '../components/servicios.vue'
 import Formulario from '../components/formulario.vue'
 import Proyectos from '../components/proyectos.vue'
 import FooterComp from '../components/footer.vue'
+import Inicio from '../components/inicio.vue'
 
 export default {
   components: {
+    Inicio,
     SobreMi,
     Habilidades,
     Servicios,
@@ -20,6 +22,7 @@ export default {
 
 <template>
   <div>
+    <inicio />
     <sobre-mi />
     <proyectos />
     <habilidades />

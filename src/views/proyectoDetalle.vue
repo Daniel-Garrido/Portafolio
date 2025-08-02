@@ -28,15 +28,16 @@ export default {
   <div class="contenedor-proyectos-router container py-5">
 
     <router-link :to="{ path: '/', hash: '#proyectos' }" class="btn-regresar btn btn-primary mb-3">
-      ← Volver
+      <i class="fas fa-arrow-left me-2"></i>
     </router-link>
+
 
     <div v-if="proyecto">
 
       <!-- titulo principal -->
       <h2 class="contenedor-proyectos-router-titulo text-center">{{ proyecto.titulo }}</h2>
       <hr class="hr">
-      
+
       <div class="contenedor-proyectos-imagenes">
         <img v-for="(img, index) in proyecto.galeria" :key="index" :src="img" class="imagen-galeria" />
       </div>
@@ -74,15 +75,21 @@ export default {
 </template>
 
 <style>
-
 .btn-regresar {
-  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 0px;
+  border-radius: 50%;
 }
 
 .contenedor-proyectos-router {
+
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  margin-top: 100px;
 }
 
 .contenedor-proyectos-router p {
@@ -97,7 +104,7 @@ export default {
   padding-top: 20px;
 }
 
-.contenedor-proyectos-imagenes{
+.contenedor-proyectos-imagenes {
   width: 100%;
   display: grid;
   place-items: center;
@@ -106,11 +113,12 @@ export default {
   gap: 10px;
 }
 
-.contenedor-proyectos-imagenes img{
+.contenedor-proyectos-imagenes img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .contenedor-proyectos-router-subtitulo {
   font-size: 1.5rem;
 }
@@ -128,14 +136,17 @@ export default {
 }
 
 
-@media(max-width: 500px) {
-  .btn-regresar {
-    width: 50%;
+@media(max-width: 750px) {
+  .contenedor-proyectos-imagenes {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  .contenedor-proyectos-imagenes{
-  grid-template-columns: 1fr;
- }
+@media(max-width: 500px) {
+ 
+  .contenedor-proyectos-imagenes {
+    grid-template-columns: 1fr;
+  }
 
 }
 </style>

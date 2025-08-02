@@ -19,7 +19,12 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory('/Portafolio/'), 
-  routes
+  routes,
+   
+  scrollBehavior(to, from, savedPosition) {
+    // Siempre hacer scroll al principio de la página
+    return { top: 0 }
+  }
 })
 
 export default router

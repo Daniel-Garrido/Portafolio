@@ -9,17 +9,17 @@ export default [
     descripcionDetalladaTecnologias:"Para este proyecto se uso la herramienta Figma para el diseño UI/UX, la cual permite crear prototipos interactivos y diseños visuales de alta calidad. Figma es una herramienta colaborativa que facilita el trabajo en equipo y la retroalimentación en tiempo real.",
 
     categoria: "diseño",
-    imagen: "proyectos/ProyectoCafeteria1.png",
+    imagen: "/proyectos/ProyectoCafeteria1.png",
     link: "https://www.figma.com/design/NTrPRh1QpjKyrJEJA754Vj/Sitio-Web-cafeteria?node-id=42-1836",
     
     tecnologias: [
-      { nombre: "figma", icono: "/Portafolio/iconos/figma.png" }
+      { nombre: "figma", icono: "/iconos/figma.png" }
     ],
     
     galeria: [
-    "../proyectos/Imagen1.png",
-    "../proyectos/Imagen2.png",
-    "../proyectos/Imagen3.png"
+    "/proyectos/ProCoffe3.png",
+    "/proyectos/ProCoffe2.png",
+    "/proyectos/ProCoffe1.png"
     ]
 
     
@@ -32,10 +32,13 @@ export default [
 
     descripcionDetalladaTecnologias:"Para este proyecto se uso la herramienta Figma para el diseño UI/UX, la cual permite crear prototipos interactivos y diseños visuales de alta calidad. Figma es una herramienta colaborativa que facilita el trabajo en equipo y la retroalimentación en tiempo real.",
     categoria: "diseño",
-    imagen: "proyectos/ProyectoDashboardMaia21.png",
+    imagen: "/proyectos/ProyectoDashboardMaia21.png",
     link: "https://www.figma.com/design/ZprWauw4TBOzH3ryFsLUd3/Dashboard-MAIA-2.0?node-id=0-1",
     tecnologias: [
-      { nombre: "figma", icono: "/Portafolio/iconos/figma.png" }
+      { nombre: "figma", icono: "/iconos/figma.png" }
+    ],
+     galeria: [
+    "/proyectos/ProMaia1.png",
     ]
   },
   
@@ -47,10 +50,13 @@ export default [
 
     descripcionDetalladaTecnologias:"Para este proyecto se uso la herramienta Figma para el diseño UI/UX, la cual permite crear prototipos interactivos y diseños visuales de alta calidad. Figma es una herramienta colaborativa que facilita el trabajo en equipo y la retroalimentación en tiempo real.",
     categoria: "diseño",
-    imagen: "proyectos/ProyectoTecSistemas1.png",
+    imagen: "/proyectos/ProyectoTecSistemas1.png",
     link: "https://www.figma.com/design/U1qBT7pu7sFmoI7axRPmiO/Landing-Page-Tecnm-Sistemas?node-id=171-971",
     tecnologias: [
-      { nombre: "figma", icono: "/Portafolio/iconos/figma.png" }
+      { nombre: "figma", icono: "/iconos/figma.png" }
+    ],
+     galeria: [
+    "/proyectos/ProTec1.png",
     ]
   },
   
@@ -62,9 +68,14 @@ export default [
     
     descripcionDetalladaTecnologias:"Para este proyecto se uso lenguajes de programación web como HTML, CSS, Boostrap y javascript, para mejorar la experiencia del usuario.",
     categoria: "programacion",
-    imagen: "proyectos/ProyectoMaikron1.png",
+    imagen: "/proyectos/ProyectoMaikron1.png",
     link: "https://maikron.org/",
-    tecnologias: ["html5", "css3", "js", "bootstrap"]
+    tecnologias: ["html5", "css3", "js", "bootstrap"],
+     galeria: [
+    "/proyectos/ProMaikron1.png",
+    "/proyectos/ProMaikron2.png",
+    "/proyectos/ProMaikron3.png"
+    ]
   },
 
   {
@@ -76,9 +87,15 @@ export default [
     descripcionDetalladaTecnologias:"Para este proyecto se uso lenguajes de programación web como HTML, CSS y Javascript, ademas que se usaron lirebrias como animate css para mejorar la experiencia del usuario. ademas se usó JQuery para agilizar el proceso de desarrollo y mejorar la interactividad de la página.",
 
     categoria: "programacion",
-    imagen: "proyectos/ProyectLaserPro1.png",
+    imagen: "/proyectos/ProyectLaserPro1.png",
     link: "https://daniel-garrido.github.io/Laser-Pro/",
-    tecnologias: ["html5", "css3", "js"]
+    tecnologias: ["html5", "css3", "js"],
+    
+    galeria: [
+    "/proyectos/ProLaser1.png",
+    "/proyectos/ProLaser2.png",
+    "/proyectos/ProLaser3.png"
+    ]
   },
   
   {
@@ -89,10 +106,13 @@ export default [
     descripcionDetalladaTecnologias:"Para este proyecto se uso el lenguaje de programación Java, el cual es ampliamente utilizado para el desarrollo de aplicaciones de escritorio. Java es conocido por su portabilidad y robustez, lo que lo convierte en una excelente opción para este tipo de proyectos.",
 
     categoria: "software",
-    imagen: "proyectos/ProyectoItalika1.png",
+    imagen: "/proyectos/ProyectoItalika1.png",
     link: "https://github.com/Daniel-Garrido/Compilador_A2",
     tecnologias: [
-      { nombre: "java", icono: "/Portafolio/iconos/java.png" }
+      { nombre: "java", icono: "/iconos/java.png" }
+    ],
+    galeria: [
+    "/proyectos/ProItalika.png",
     ]
   },
   
@@ -104,13 +124,19 @@ export default [
      descripcionDetalladaTecnologias:"Este proyecto se desarrolló utilizando tecnologías modernas como vue js, primevue para la parte del frontend y java con spring boot para la parte del backend. Vue.js es un framework de JavaScript que permite crear interfaces de usuario interactivas y reactivas, mientras que Spring Boot es un framework de Java que facilita el desarrollo de aplicaciones web y servicios RESTful. MySQL se utilizó como base de datos para almacenar la información del sistema.",
    
     categoria: "software",
-    imagen: "proyectos/ProyectoSGDCM.png",
+    imagen: "/proyectos/ProyectoSGDCM.png",
     link: "https://www.figma.com/design/NTrPRh1QpjKyrJEJA754Vj/Sitio-Web-cafeteria?node-id=42-1836",
     tecnologias: [
       "html5", "css3", "js", "vuejs",
-      { nombre: "java", icono: "/Portafolio/iconos/java.png" },
-      { nombre: "sprin", icono: "/Portafolio/iconos/springBoot.png" },
-      { nombre: "sql", icono: "/Portafolio/iconos/sql.png" }
+      { nombre: "java", icono: "/iconos/java.png" },
+      { nombre: "sprin", icono: "/iconos/springBoot.png" },
+      { nombre: "sql", icono: "/iconos/sql.png" }
+    ],
+
+    galeria: [
+    "/proyectos/ProSGDM1.png",
+    "/proyectos/ProSGDM2.png",
+    "/proyectos/ProSGDM3.png"
     ]
   }
 ]

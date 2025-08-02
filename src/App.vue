@@ -1,8 +1,9 @@
 <script setup>
+
 // Importar los componentes al archivo principal
 import Header from './components/header.vue';
 
-// Importar funciones de Vue y la librería de emailjs
+
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const fullName = "Daniel Arcángel Garrido Hoil";
@@ -53,27 +54,14 @@ onUnmounted(() => {
 <template>
 
   <!-- seccion principal de la pagina -->
-  <div id="app"> <!-- Botón de "ir arriba" --> <a href="#inicio" id="scrollToTop" class="btn-arriba "
-      v-show="showScrollButton" @click.prevent="scrollToTop"> <i class="fas fa-arrow-up" aria-hidden="true"></i> </a>
-    
-    <Header /> <!-- seccion de inicio -->
-    
-    <section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-light ">
-      <div class="contenedor-Inicio container p-1 d-flex align-items-center gap-4"> <!--Contenedor de  Información -->
-        <div class="contenedor-info-inicio w-100 container ">
-          <h1 class="mb-2 ">{{ typedName }}</h1>
-          <p class="text-muted mb-3 ">Diseñador Web!!</p> <!-- Iconos -->
-          <div class="iconos d-flex mb-3 animacion-redes-sociales "> <a
-              href="https://www.linkedin.com/in/daniel-garrido-05138b225/" target="_blank"
-              class="text-decoration-none me-6 "><i class="fab fa-linkedin"></i></a> <a
-              href="https://github.com/Daniel-Garrido" target="_blank" class="text-decoration-none me-6 "><i
-                class="fab fa-github"></i></a> <a href="https://www.instagram.com/daniel.garrido_/" target="_blank"
-              class="text-decoration-none "><i class="fab fa-instagram"></i></a> </div> <!-- Botón de contacto --> <a
-            href="#contacto" class="btn text-white">Contacto</a>
-        </div>
-      </div>
-    </section>
+  <div id="app"> 
 
+    <!-- Botón de "ir arriba" --> 
+    <a href="#inicio" id="scrollToTop" class="btn-arriba "
+      v-show="showScrollButton" @click.prevent="scrollToTop"> <i class="fas fa-arrow-up" aria-hidden="true"></i> 
+    </a>
+    <!-- seccion de menu de navegacion -->
+    <Header /> 
   </div>
 
   <router-view />
@@ -127,50 +115,5 @@ onUnmounted(() => {
   box-shadow: 0 8px 15px rgba(62, 182, 238, 0.5);
   ;
   transform: scale(1.1);
-}
-
-/***** imagen de inicio *******/
-.contenedor-img img {
-  width: 50%;
-  height: 50%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* estilo a la  seccion principal */
-.contenedor-info-inicio h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-}
-
-/* estilo a los iconos */
-.iconos a {
-  font-size: 30px;
-  padding-right: 10px;
-}
-
-/*************** media querys *****************/
-@media (max-width: 500px) {
-
-  /* responsive design al contenedor de inicio */
-  .contenedor-Inicio {
-    flex-direction: column;
-  }
-
-  .contenedor-info-inicio {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .contenedor-info-inicio h1 {
-    font-size: 2.5rem;
-  }
-
-  /* responsive design a los iconos */
-  .iconos {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
 }
 </style>

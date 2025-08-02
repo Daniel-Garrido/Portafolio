@@ -11,8 +11,8 @@ export default defineConfig({
     vueDevTools(),
     
   ],
-  base:'https://Daniel-Garrido.github.io/Portafolio/',
-  
+  //base:'https://Daniel-Garrido.github.io/Portafolio/', activar para github pages
+  base:'/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
