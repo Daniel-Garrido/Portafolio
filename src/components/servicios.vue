@@ -9,15 +9,15 @@
     <div class="">
       <!-- contenedor del texto del encabezado -->
       <div class="text-center mb-5">
-        <h2 class="text-dark " >Servicios</h2>
+        <h2 data-aos="fade-down" class="text-dark " >Servicios</h2>
         <hr class="hr">
       </div>
 
       <!-- contenedor de la seccion de las card -->
-      <div class="seccion-servicios-content">
+      <div  class="seccion-servicios-content">
 
         <!-- card 1 -->
-        <div class="seccion-servicios-content-card " >
+        <div data-aos="fade-up" class="seccion-servicios-content-card " >
           <div class="">
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-pen-nib fa-3x text-primary"></i>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- card 2 -->
-        <div class="seccion-servicios-content-card " >
+        <div data-aos="fade-up" class="seccion-servicios-content-card " >
           <div class="">
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-code fa-3x text-primary"></i>

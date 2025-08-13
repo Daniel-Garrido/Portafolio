@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 
 // Variables reactivas para el formulario
 const form = ref({
-  from_name: "",
+  emailjs_name: "",
   emailjs_email: "",
   emailjs_message: "",
   project_type: "",
@@ -38,7 +38,7 @@ const sendEmail = async () => {
 // Resetear formulario
 const resetForm = () => {
   form.value = {
-    from_name: "",
+    emailjs_name: "",
     emailjs_email: "",
     emailjs_message: "",
     project_type: "",
@@ -51,7 +51,7 @@ const resetForm = () => {
   <section id="contacto">
     <div class="p-5 formulario_contacto_contenedor">
       <div class="text-center mb-5">
-        <h2 class="text-dark ">Contacto</h2>
+        <h2 data-aos="fade-down" class="text-dark ">Contacto</h2>
         <hr class="hr">
       </div>
 
@@ -59,17 +59,18 @@ const resetForm = () => {
       <form class="formulario_contacto" @submit.prevent="sendEmail">
         <div class="formulario_contacto_content">
           
-          <div class="field">
-            <label for="from_name"></label>
-            <input class="input" type="text" placeholder="Ingresa tu nombre" v-model="form.from_name" />
+          <div  class="field">
+            <label data-aos="fade-up" for="emailjs_name">Nombre</label>
+            <input data-aos="fade-down" class="input" type="text" placeholder="Ingresa tu nombre" v-model="form.emailjs_name" />
           </div>
 
           <div class="field">
-            <label for="emailjs_email" ></label>
-            <input class="input" type="email" placeholder="Correo electrónico" v-model="form.emailjs_email" />
+            <label data-aos="fade-up" for="emailjs_email" >Correo electrónico</label>
+            <input data-aos="fade-down" class="input" type="email" placeholder="Correo electrónico" v-model="form.emailjs_email" />
           </div>
 
           <div class="field">
+              <label data-aos="fade-up" for="select" >Selecciona tu servicio</label>
             <select v-model="form.project_type">
               <option disabled selected value="">¿Qué servicio te interesa?</option>
               <option value="web">Páginas web</option>
@@ -79,7 +80,7 @@ const resetForm = () => {
           </div>
 
           <div class="field">
-            <label for="emailjs_message">Cuéntanos más sobre tu proyecto</label>
+            <label data-aos="fade-up" for="emailjs_message">Cuéntanos más sobre tu proyecto</label>
             <textarea rows="5" v-model="form.emailjs_message" required></textarea>
           </div>
 
@@ -104,28 +105,28 @@ const resetForm = () => {
 .formulario_contacto_content {
   width: 50%;
   padding: 15px 30px 15px 30px;
-  border: 1px solid #c2c2c2;
+ 
 }
 
 .field {
   margin-bottom: 15px;
+;
 }
 
 
 .field label {
+  font-weight: 600;
   display: block;
   font-size: 16px;
-  padding: 10px 10px 0px 0px;
 }
-
 
 .field input{
   width: 50%;
-  border: none;
-  border-bottom: 1px solid #c2c2c2;
-  padding: 10px 10px 0px 0px;
+  border: 1px solid #038be6;
+  padding: 10px;
   margin-top: 20px;
   margin-bottom:20px;
+  border-radius: 5px;
 }
 
 .field input:focus,
@@ -138,7 +139,10 @@ const resetForm = () => {
   
   width: 100%;
   border: none;
-  border-bottom: 1px solid #c2c2c2;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #038be6;
+  border-radius: 5px;
  
 }
 .field select:focus,
@@ -156,7 +160,10 @@ const resetForm = () => {
 }
 
 .field textarea{
-   border: 1px solid #c2c2c2;
+  border: 1px solid #038be6;
+  border-radius:5px ;
+  padding: 10px;
+
 }
 
 .field textarea:focus,

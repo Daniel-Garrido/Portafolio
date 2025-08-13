@@ -9,6 +9,11 @@ h1, h2{
    font-family: 'Open Sans', sans-serif;
 }
 
+h2{
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+
 p{
     font-family: 'Open Sans', sans-serif;
 }

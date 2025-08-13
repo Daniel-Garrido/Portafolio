@@ -34,7 +34,7 @@ export default {
   <section id="proyectos" class="bg-light proyectos-section-bg">
     <!-- seccion del titulo -->
     <div class="p-5">
-      <h2 class="text-center p-2 ">Proyectos</h2>
+      <h2 data-aos="fade-down" class="text-center p-2 ">Proyectos</h2>
       <hr class="hr">
     </div>
     <!-- contenedor de las cards -->
@@ -50,12 +50,12 @@ export default {
       </div>
 
       <!-- Contenido de las tarjetas (cards) -->
-      <div class="row">
+      <div  class="row">
 
         <div v-for="(project, index) in proyectosFiltrados" :key="index" class="col-md-4 mb-4">
 
           <!-- contenido de cada card -->
-          <div class="card card-proyectos">
+          <div data-aos="fade-up" class="card card-proyectos">
 
             <!-- contenido de la imagen de la card -->
             <div class="img-container">

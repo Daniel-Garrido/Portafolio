@@ -4,7 +4,7 @@
 <template>
   <footer class="bg-dark footer p-4">
     <section>
-      <h3 class="text-white">
+      <h3 data-aos="fade-down" class="text-white">
         Contacto
       </h3>
 

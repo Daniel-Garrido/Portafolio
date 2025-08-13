@@ -14,6 +14,6 @@ app.mount('#app')
 //inicir la libreria de AOS
 AOS.init({
   duration: 800, // duración de animación (en ms)
-  once: true     // si quieres que se anime solo una vez
+  once: false     // si quieres que se anime solo una vez
 })
 

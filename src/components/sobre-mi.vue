@@ -73,7 +73,7 @@ const resetForm = () => {
 
   <section id="sobre-mi" class="seccion-sobre-mi-content container my-5">
 
-    <h2 class="fw-bold mb-4 text-center  " >
+    <h2 data-aos="fade-down" class="fw-bold mb-4 text-center  " >
     Sobre mí
   </h2>
   
@@ -83,7 +83,7 @@ const resetForm = () => {
 
       <div class="seccion-sobre-mi-content-info container">
 
-        <p class="text" >
+        <p data-aos="fade-right" class="text" >
           
           Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Mérida, actualmente
           cursando el último semestre. Mi pasión por el desarrollo web y la programación me ha llevado a especializarme
@@ -94,14 +94,14 @@ const resetForm = () => {
           innovación y el aprendizaje continuo. Algunos de mis principales intereses incluyen:
         </p>
 
-        <p class="text ">
+        <p data-aos="fade-right" class="text ">
           Diseño de experiencias de usuario (UX) y interfaces intuitivas (UI).
           Desarrollo de aplicaciones web responsivas y optimizadas para diversos dispositivos.
           Exploración de nuevas tecnologías para impulsar soluciones creativas y eficientes.
           Siempre busco nuevos retos que me permitan crecer profesional y personalmente en el ámbito tecnológico.
         </p>
 
-        <div class="botones-sobre-mi d-flex ">
+        <div data-aos ="fade-up" class="botones-sobre-mi d-flex ">
           <a href="CVDANIEL.pdf" class="btn btn-primary" download="CVDANIEL.pdf">Descargar CV</a>
         </div>
       </div>

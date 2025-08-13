@@ -3,7 +3,6 @@
 // Importar los componentes al archivo principal
 import Header from './components/header.vue';
 
-
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const fullName = "Daniel Arcángel Garrido Hoil";
