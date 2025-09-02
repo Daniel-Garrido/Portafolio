@@ -6,6 +6,7 @@ import Formulario from '../components/formulario.vue'
 import Proyectos from '../components/proyectos.vue'
 import FooterComp from '../components/footer.vue'
 import Inicio from '../components/inicio.vue'
+import Experiencia from '../components/experiencia.vue'
 
 export default {
   components: {
@@ -15,7 +16,8 @@ export default {
     Servicios,
     Formulario,
     Proyectos,
-    FooterComp
+    FooterComp,
+    Experiencia
   }
 }
 </script>
@@ -23,6 +25,7 @@ export default {
 <template>
   <div>
     <inicio />
+    <experiencia />
     <sobre-mi />
     <proyectos />
     <habilidades />

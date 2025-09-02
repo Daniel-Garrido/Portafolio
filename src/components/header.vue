@@ -62,7 +62,7 @@ onMounted(() => {
 <template>
 
   <!-- menu de navegacion -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
 
     <div class="menu-navegacion container d-flex justify-content-between align-items-center">
 
@@ -83,6 +83,7 @@ onMounted(() => {
           <li class="nav-item">
             <a id="link-inicio" class="nav-link active text-dark" href="#inicio">Inicio</a>
           </li>
+          
           <li class="nav-item">
             <a id="link-sobre-mi" class="nav-link text-dark" href="#sobre-mi">Sobre mí</a>
           </li>

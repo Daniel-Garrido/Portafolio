@@ -3,7 +3,7 @@
 
 <template>
 
-  <section id="servicios" class="seccion-servicios  bg-light">
+  <section id="servicios" class="seccion-servicios  bg-white">
     
     <!-- contenedor principal -->
     <div class="">
@@ -25,9 +25,8 @@
             <h3 class="mb-3">Diseñador</h3>
             <div class="text-left">
               <p><i class="fa-solid fa-check text-success"></i> Diseño UI/UX</p>
-              <p><i class="fa-solid fa-check text-success"></i> Maquetación web</p>
               <p><i class="fa-solid fa-check text-success"></i> Diseño de prototipos y mockups</p>
-              <p><i class="fa-solid fa-check text-success"></i> Diseño de logos</p>
+              <p><i class="fa-solid fa-check text-success"></i> Diseño de logos profesionales</p>
             </div>
             <a href="#contacto" class="btn btn-primary mt-3">Cotizar Proyecto</a>
           </div>
@@ -39,7 +38,24 @@
             <div class="iconos mb-3 text-center">
               <i class="fa-solid fa-code fa-3x text-primary"></i>
             </div>
-            <h3 class="mb-3">Desarrollador Frontend</h3>
+            <h3 class="mb-3">Desarrollador web</h3>
+            <div class="text-left">
+              <p><i class="fa-solid fa-check text-success"></i> Desarrollo de páginas web responsivas</p>
+              <p><i class="fa-solid fa-check text-success"></i> Desarrollo de aplicaciones web</p>
+              <p><i class="fa-solid fa-check text-success"></i> Optimización SEO</p>
+              <p><i class="fa-solid fa-check text-success"></i> Desarrollo de landing page</p>
+            </div>
+            <a href="#contacto" class="btn btn-primary mt-3">Cotizar Proyecto</a>
+          </div>
+        </div>
+
+         <!-- card 3 -->
+        <div data-aos="fade-up" class="seccion-servicios-content-card " >
+          <div class="">
+            <div class="iconos mb-3 text-center">
+              <i class="fa-solid fa-code fa-3x text-primary"></i>
+            </div>
+            <h3 class="mb-3">Desarrollador de software</h3>
             <div class="text-left">
               <p><i class="fa-solid fa-check text-success"></i> Desarrollo de páginas web responsivas</p>
               <p><i class="fa-solid fa-check text-success"></i> Desarrollo de aplicaciones web</p>

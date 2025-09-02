@@ -31,7 +31,7 @@ export default {
 
 <template>
 
-  <section id="proyectos" class="bg-light proyectos-section-bg">
+  <section id="proyectos" class="bg-white proyectos-section-bg">
     <!-- seccion del titulo -->
     <div class="p-5">
       <h2 data-aos="fade-down" class="text-center p-2 ">Proyectos</h2>

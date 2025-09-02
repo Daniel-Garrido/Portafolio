@@ -28,12 +28,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-<section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-light">
+<section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-white">
   <div class="contenedor-inicio container p-1 d-flex align-items-center gap-4">
     <div class="contenedor-info-inicio w-100">
       
       <h1 data-aos="fade-up" class="mb-2">{{ typedName }}</h1>
-      <p data-aos="fade-down" class="text-muted mb-3">Diseñador Web!!</p>
+      <p data-aos="fade-down" class=" text-muted mb-3">Diseñador Web!!</p>
       
       <div data-aos="fade-down" class="iconos d-flex mb-3 animacion-redes-sociales">
         <a href="https://www.linkedin.com/in/daniel-garrido-05138b225/" target="_blank" class="text-decoration-none me-3">
@@ -66,8 +66,12 @@ onUnmounted(() => {
 
 /* estilo a la  seccion principal */
 .contenedor-info-inicio h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
+}
+
+.contenedor-info-inicio p{
+  font-size: 2rem;
 }
 
 /* estilo a los iconos */
@@ -87,17 +91,21 @@ onUnmounted(() => {
 
   .contenedor-info-inicio {
     justify-content: center;
-    text-align: center;
+    text-align: left;
   }
 
   .contenedor-info-inicio h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+
+  .contenedor-info-inicio p{
+    font-size: 1.5rem;
   }
 
   /* responsive design a los iconos */
   .iconos {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
   }
 }

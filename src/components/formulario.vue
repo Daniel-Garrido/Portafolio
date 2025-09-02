@@ -50,27 +50,38 @@ const resetForm = () => {
 
   <section id="contacto">
     <div class="p-5 formulario_contacto_contenedor">
-      <div class="text-center mb-5">
+      <div class="text-center mb-2">
         <h2 data-aos="fade-down" class="text-dark ">Contacto</h2>
         <hr class="hr">
       </div>
 
+
       <!-- Inicio del formulario -->
       <form class="formulario_contacto" @submit.prevent="sendEmail">
+
         <div class="formulario_contacto_content">
           
-          <div  class="field">
-            <label data-aos="fade-up" for="emailjs_name">Nombre</label>
-            <input data-aos="fade-down" class="input" type="text" placeholder="Ingresa tu nombre" v-model="form.emailjs_name" />
+          <div class="formulario_contacto_content-text">
+            <p data-aos="fade-down" class="text text-center" >
+              ¿Quieres impulsar tu presencia en línea o empezar un nuevo proyecto web?
+              Escríbenos a través del formulario y nuestro equipo se comunicará contigo para asesorarte.
+            </p>
           </div>
 
           <div class="field">
-            <label data-aos="fade-up" for="emailjs_email" >Correo electrónico</label>
-            <input data-aos="fade-down" class="input" type="email" placeholder="Correo electrónico" v-model="form.emailjs_email" />
+            <label  for="emailjs_name">Nombre*</label>
+            <input  class="input" type="text" placeholder="Ingresa tu nombre"
+              v-model="form.emailjs_name" />
           </div>
 
           <div class="field">
-              <label data-aos="fade-up" for="select" >Selecciona tu servicio</label>
+            <label  for="emailjs_email">Correo electrónico*</label>
+            <input  class="input" type="email" placeholder="Correo electrónico"
+              v-model="form.emailjs_email" />
+          </div>
+
+          <div class="field">
+            <label for="select">Selecciona tu servicio*</label>
             <select v-model="form.project_type">
               <option disabled selected value="">¿Qué servicio te interesa?</option>
               <option value="web">Páginas web</option>
@@ -80,7 +91,7 @@ const resetForm = () => {
           </div>
 
           <div class="field">
-            <label data-aos="fade-up" for="emailjs_message">Cuéntanos más sobre tu proyecto</label>
+            <label  for="emailjs_message">Cuéntanos más sobre tu proyecto</label>
             <textarea rows="5" v-model="form.emailjs_message" required></textarea>
           </div>
 
@@ -105,12 +116,12 @@ const resetForm = () => {
 .formulario_contacto_content {
   width: 50%;
   padding: 15px 30px 15px 30px;
- 
+
 }
 
 .field {
   margin-bottom: 15px;
-;
+  ;
 }
 
 
@@ -120,12 +131,12 @@ const resetForm = () => {
   font-size: 16px;
 }
 
-.field input{
+.field input {
   width: 50%;
   border: 1px solid #038be6;
   padding: 10px;
   margin-top: 20px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 
@@ -135,18 +146,19 @@ const resetForm = () => {
   box-shadow: none;
 }
 
-.field select{
-  
+.field select {
+
   width: 100%;
   border: none;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #038be6;
   border-radius: 5px;
- 
+
 }
+
 .field select:focus,
-.field select:hover{
+.field select:hover {
   outline: none;
   box-shadow: none;
 }
@@ -159,31 +171,35 @@ const resetForm = () => {
   font-size: 16px;
 }
 
-.field textarea{
+.field textarea {
   border: 1px solid #038be6;
-  border-radius:5px ;
+  border-radius: 5px;
   padding: 10px;
 
 }
 
 .field textarea:focus,
-.field textarea:hover{
+.field textarea:hover {
   outline: none;
   box-shadow: none;
 }
 
-@media (max-width: 700px){
-  
+@media (max-width: 700px) {
+
   /* responsive design al formulario */
-  .formulario_contacto_contenedor{
+  .formulario_contacto_contenedor {
     padding: 10px !important;
     padding-top: 50px !important;
-   
+
   }
+
   .formulario_contacto_content {
     width: 100%;
   }
+
+  .field label {
+  font-size: 14px;
+}
+
 }
 </style>
-
-
