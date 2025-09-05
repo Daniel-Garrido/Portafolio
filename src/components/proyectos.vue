@@ -38,7 +38,7 @@ export default {
       <hr class="hr">
     </div>
     <!-- contenedor de las cards -->
-    <div class="container ">
+    <div class="container">
       <!-- Select para filtrar las categorías -->
       <div class="text-left mb-3">
         <select v-model="seleccionarCategoria" class="form-select " @change="filtrarProyectos">
