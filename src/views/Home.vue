@@ -13,7 +13,6 @@ export default {
     Inicio,
     SobreMi,
     Habilidades,
-    Servicios,
     Formulario,
     Proyectos,
     FooterComp,
@@ -29,7 +28,6 @@ export default {
     <sobre-mi />
     <proyectos />
     <habilidades />
-    <servicios />
     <formulario />
     <footer-comp />
   </div>

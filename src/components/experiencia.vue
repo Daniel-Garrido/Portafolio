@@ -22,7 +22,7 @@ const jobs: Job[] = [
     logo: '/logos/LogoMaikron.png',
     summary:
       'Diseños **UI/UX** en Figma para la institución. Desarrollo de una **landing page** para la institución.',
-    tags: ['Figma', 'UI/UX', 'Landing Page', 'HTML', 'CSS','Bootsrap']
+    tags: ['Figma', 'UI/UX', 'Landing Page', 'HTML', 'CSS', 'Bootsrap']
   },
   {
     role: 'Desarrollador web',
@@ -31,7 +31,7 @@ const jobs: Job[] = [
     logo: '/logos/LogoTec.jpg',
     summary:
       'Desarrollo de un sistema web con **Spring Boot** para la gestión de créditos académicos, **autenticación JWT** y **procesamiento de archivos (PDF/Excel)**. Interfaz con **Vue.js** y **PrimeVue**. Diseño e implementación de **bases de datos MySQL**.',
-    tags: ['Spring Boot', 'JWT', 'PDF/Excel', 'Vue.js', 'PrimeVue', 'MySQL','Java','MySQL','Figma','HTML','CSS']
+    tags: ['Spring Boot', 'JWT', 'PDF/Excel', 'Vue.js', 'PrimeVue', 'MySQL', 'Java', 'MySQL', 'Figma', 'HTML', 'CSS']
   },
   {
     role: 'Diseñador web',
@@ -40,7 +40,7 @@ const jobs: Job[] = [
     logo: '/logos/LogoYunow.jpeg',
     summary:
       'Desarrollo y mantenimiento de funcionalidades para el sitio. Optimización de rendimiento y mejoras SEO.',
-    tags: ['Elementor', 'Wordpress','SEO']
+    tags: ['Elementor', 'Wordpress', 'SEO']
   }
 ]
 </script>
@@ -62,7 +62,7 @@ const jobs: Job[] = [
         <div class="contenedor-experiencia-titulos py-4 mt-4">
 
           <div class="contenedor-seccion-experiencia-card">
-            
+
             <!-- titulo del puesto -->
             <h3 class="text-title">{{ job.role }}</h3>
 
@@ -71,8 +71,9 @@ const jobs: Job[] = [
               <img :src="job.logo" :alt="job.company" class="logo" />
               <div class="text-title-titulos">{{ job.company }}</div>
             </div>
+
             <!-- contenedor de la fecha-->
-            <div class="text-date"> {{ job.dates }}</div>
+            <div class="contenedor-experiencia-date text-date"> {{ job.dates }}</div>
           </div>
         </div>
 
@@ -92,17 +93,16 @@ const jobs: Job[] = [
 </template>
 
 <style scoped>
-
 /* contenedor principal */
 .contenedor-experiencia-card {
   width: 100%;
-  display: grid;           
+  display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   gap: 30px;
   padding: 20px;
-  margin: 15px 0px 15px 0px;
-  border-bottom: 1px solid #c2c2c2;  
+  margin: 30px 0px 15px 0px;
+  border-left: 1px solid #c2c2c2;
 }
 
 /* contenedor de las card */
@@ -110,30 +110,37 @@ const jobs: Job[] = [
   width: 100%;
   display: grid;
   align-content: start;
-           
+}
+
+.contenedor-experiencia-date {
+  padding: 0px !important;
+  padding-left: 70px !important;
 }
 
 /* estilos a los titulos de la experiencia */
-.text-title{
+.text-title {
   font-size: 22px;
   font-weight: 700;
 }
-.text-title-titulos{
+
+.text-title-titulos {
   font-size: 18px;
   font-weight: 400;
 }
-.text-date{
+
+.text-date {
   font-size: 15px;
   font-style: italic;
   padding: 15px 0px;
 }
+
 /* contenedor del logo y de la informacion */
 .contenedor-experiencia-titulos-info {
-  display: grid;            
+  display: grid;
   grid-template-columns: 1fr 8fr;
   gap: 10px;
   align-items: center;
-  padding: 10px 0;     
+  padding: 10px 0;
 }
 
 /* estilos al logos de cada empresa */
@@ -147,7 +154,6 @@ const jobs: Job[] = [
 
 /* contenedor de la informacion de la experiencia */
 .contenedor-experiencia-info {
-  
   display: grid;
   align-content: start;
   padding: 10px 0px;
@@ -156,14 +162,13 @@ const jobs: Job[] = [
 
 /* estilos al texto del contenido de la experiencia */
 .contenedor-experiencia-info p {
-  font-size: 16px;    
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 600;    
+  font-weight: 600;
 }
 
-
 /* contenedor de las tags de las tecnologías */
-.contenedor-experiencia-info > div {
+.contenedor-experiencia-info>div {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -178,16 +183,46 @@ const jobs: Job[] = [
   font-weight: 600;
 }
 
-/* ===== Responsive ===== */
+/* =========== Responsive ================= */
 @media (max-width: 750px) {
 
   .contenedor-experiencia-card {
-    grid-template-columns: 1fr;  
+    grid-template-columns: 1fr;
   }
 
   .contenedor-experiencia-info p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
+@media(max-width:500px) {
+
+  .text-title-titulos {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .text-date {
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+
+  .contenedor-experiencia-card {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 0px;
+    padding: 10px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .contenedor-experiencia-titulos {
+    padding: 0px !important;
+  }
+
+  .contenedor-experiencia-date {
+    padding-left: 60px !important;
+  }
+
+}
 </style>

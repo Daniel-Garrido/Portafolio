@@ -11,9 +11,9 @@
         <h3 data-aos="fade-down" class="text-white">
           Daniel Garrido
         </h3>
-        <P class="text pt-2">
+        <p class="text pt-2">
           Ingeniero en sistemas computacionales especializado en Desarrollo de Software y diseño web
-        </P>
+        </p>
       </div>
 
       <!-- iconos de redes sociales -->

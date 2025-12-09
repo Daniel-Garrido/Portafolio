@@ -82,8 +82,7 @@ onMounted(() => {
         <ul class="navbar-nav">
           <li class="nav-item">
             <a id="link-inicio" class="nav-link active text-dark" href="#inicio">Inicio</a>
-          </li>
-          
+          </li>   
           <li class="nav-item">
             <a id="link-sobre-mi" class="nav-link text-dark" href="#sobre-mi">Sobre mí</a>
           </li>
@@ -91,7 +90,7 @@ onMounted(() => {
             <a id="link-habilidades" class="nav-link text-dark" href="#habilidades">Habilidades</a>
           </li>
           <li class="nav-item">
-            <a id="link-servicios" class="nav-link text-dark" href="#servicios">Servicios</a>
+            <a id="link-experiencia" class="nav-link text-dark" href="#experiencia">Experiencia</a>
           </li>
           <li class="nav-item">
             <a id="link-proyectos" class="nav-link text-dark" href="#proyectos">Proyectos</a>
