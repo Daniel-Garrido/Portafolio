@@ -3,6 +3,7 @@
   --color-dark:#222326;
   --color-dark-fondo: #323232;
   --color-principal: #FFFFFF;
+  --color-secundario: #0F97F7;
 }
 
 h1, h2{
@@ -24,6 +25,12 @@ p{
   color: #0F97F7;
 }
 
+.btn{
+  padding: 5px 10px !important;
+  border-radius: 50px !important;
+  font-size: 14px !important;
+}
+
 
 /********** Estilos al boton  ************/
 .btn-primario {
@@ -31,8 +38,8 @@ p{
   text-align: center;
   font-size: 1rem;
   padding: 5px;
-  background-color: #0f97f7;
-  border: 1px solid #0F97F7;
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-secundario);
   border-radius: 50px;
   text-decoration: none !important;
   transition: all 0.3s ease !important;

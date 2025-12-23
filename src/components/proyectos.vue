@@ -68,7 +68,7 @@ export default {
 
               <!-- contenido de los textos de la card -->
               <div class="card-content-text">
-                <h5 class="card-title text-left">{{ project.titulo }}</h5>
+                <h5 class="card-title ">{{ project.titulo }}</h5> 
                 <p class="card-text">{{ project.descripcion }}</p>
               </div>
 
@@ -104,6 +104,7 @@ export default {
 </template>
 
 <style>
+
 /* estilo al seleccionador de las categorías */
 .form-select {
   width: 50%;
@@ -122,7 +123,7 @@ export default {
 }
 
 .card-proyectos {
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .card-body {
@@ -130,14 +131,15 @@ export default {
 }
 
 .card-content-text h5 {
-  padding: 0px;
+  padding: 0px !important;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 18px;
 }
 
 .card-content-text p {
   font-size: 14px;
-  color: #686a6f;
+  font-weight: lighter;
 }
 
 .card {
@@ -149,7 +151,7 @@ export default {
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .img-container:hover .card-img-top {

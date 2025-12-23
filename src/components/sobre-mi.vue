@@ -73,35 +73,31 @@ const resetForm = () => {
 
   <section id="sobre-mi" class="seccion-sobre-mi-content container my-5">
 
-    <h2 data-aos="fade-down" class="fw-bold mb-4 text-center  " >
-    Sobre mí
-  </h2>
-  
+    <h2 data-aos="fade-down" class="fw-bold mb-4 text-center  "> Sobre mí</h2>
     <hr class="hr">
 
     <div class="d-flex justify-content-center align-items-center">
 
       <div class="seccion-sobre-mi-content-info container">
 
-        <p data-aos="fade-right" class="text" >
-          
-          Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Mérida, actualmente
-          cursando el último semestre. Mi pasión por el desarrollo web y la programación me ha llevado a especializarme
-          en Desarrollo Web, con un enfoque en mejorar constantemente mis habilidades en
-          tecnologías de frontend, backend y diseño.
-
-          Me motiva crear experiencias digitales atractivas, funcionales y optimizadas, siempre con un enfoque en la
-          innovación y el aprendizaje continuo. Algunos de mis principales intereses incluyen:
+        <p data-aos="fade-right" class="text">
+          Soy egresado de la carrera de Ingeniería en Sistemas Computacionales por el Instituto Tecnológico de Mérida,
+          con enfoque en desarrollo web y soluciones digitales. A lo largo de mi formación y experiencia profesional he
+          fortalecido habilidades en tecnologías de frontend y backend, así como en diseño de interfaces y experiencia
+          de usuario (UI/UX), aplicando buenas prácticas de desarrollo, optimización y mantenimiento de plataformas web.
         </p>
 
         <p data-aos="fade-right" class="text ">
-          Diseño de experiencias de usuario (UX) y interfaces intuitivas (UI).
-          Desarrollo de aplicaciones web responsivas y optimizadas para diversos dispositivos.
-          Exploración de nuevas tecnologías para impulsar soluciones creativas y eficientes.
-          Siempre busco nuevos retos que me permitan crecer profesional y personalmente en el ámbito tecnológico.
+          Me especializo en la creación de sitios y aplicaciones web funcionales, responsivas y optimizadas, cuidando
+          tanto la parte visual como el rendimiento y la estructura del sistema. Tengo experiencia trabajando con
+          WordPress, Elementor y estrategias de SEO on-page, así como en la generación de contenido digital y soporte
+          técnico continuo. Me caracteriza el aprendizaje constante, la capacidad de adaptación a nuevas tecnologías y
+          la búsqueda de soluciones eficientes que aporten valor real a los proyectos. Siempre estoy en busca de nuevos
+          retos que impulsen mi crecimiento profesional y me permitan contribuir de manera efectiva en equipos
+          tecnológicos.
         </p>
 
-        <div data-aos ="fade-up" class="botones-sobre-mi d-flex ">
+        <div data-aos="fade-up" class="botones-sobre-mi d-flex ">
           <a href="CVDANIEL.pdf" class="btn btn-primary" download="CVDANIEL.pdf">Descargar CV</a>
         </div>
       </div>
@@ -117,15 +113,11 @@ section {
   scroll-margin-top: 80px;
 }
 
-.botones-sobre-mi a {
-  margin-right: 10px;
-}
 
 .hr {
   width: 100px;
   background-color: #0F97f7;
   padding: 1px;
-
 }
 
 .text {
@@ -135,17 +127,18 @@ section {
   font-family: 'Open Sans', sans-serif;
 }
 
-@media(max-width: 500px){
-  .seccion-sobre-mi-content{
+@media(max-width: 500px) {
+  .seccion-sobre-mi-content {
     padding: 15px;
   }
-  .seccion-sobre-mi-content-info{
+
+  .seccion-sobre-mi-content-info {
     padding: 0px;
-   
   }
+
   .text {
-  font-size: 14px;
-  line-height: 25px;
+    font-size: 14px;
+    line-height: 25px;
   }
 }
 </style>

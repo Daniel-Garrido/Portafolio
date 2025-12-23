@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+// Definición del tipo Job
 type Job = {
   role: string
   company: string
@@ -14,33 +15,14 @@ const highlight = (text: string) =>
   text.replace(/\*\*(.+?)\*\*/g, '<span class="hl">$1</span>')
 
 const jobs: Job[] = [
-  {
-    role: 'Diseñador web',
-    company:
-      'Asociación para el Avance de las Aplicaciones Inteligentes y Tecnologías con Impacto Social (Maikron).',
-    dates: 'Febrero 2024 – Agosto 2024',
-    logo: '/logos/LogoMaikron.png',
-    summary:
-      'Diseños **UI/UX** en Figma para la institución. Desarrollo de una **landing page** para la institución.',
-    tags: ['Figma', 'UI/UX', 'Landing Page', 'HTML', 'CSS', 'Bootsrap']
-  },
-  {
-    role: 'Desarrollador web',
-    company: 'Departamento desarrollo académico IT Mérida',
-    dates: 'Febrero 2025 – Julio 2025',
-    logo: '/logos/LogoTec.jpg',
-    summary:
-      'Desarrollo de un sistema web con **Spring Boot** para la gestión de créditos académicos, **autenticación JWT** y **procesamiento de archivos (PDF/Excel)**. Interfaz con **Vue.js** y **PrimeVue**. Diseño e implementación de **bases de datos MySQL**.',
-    tags: ['Spring Boot', 'JWT', 'PDF/Excel', 'Vue.js', 'PrimeVue', 'MySQL', 'Java', 'MySQL', 'Figma', 'HTML', 'CSS']
-  },
+ 
   {
     role: 'Diseñador web',
     company: 'Yucatán Now',
     dates: 'Agosto 2025 – Actualidad',
     logo: '/logos/LogoYunow.jpeg',
-    summary:
-      'Desarrollo y mantenimiento de funcionalidades para el sitio. Optimización de rendimiento y mejoras SEO.',
-    tags: ['Elementor', 'Wordpress', 'SEO']
+    summary:'Desarrollo y administración de un sitio web de noticias para Yucatán Now utilizando WordPress y Elementor, enfocándome en la experiencia del usuario y el correcto funcionamiento de la plataforma. Realizo mantenimiento continuo y optimización SEO on-page para mejorar el posicionamiento en buscadores. Brindo soporte y mantenimiento al sitio web de Gran San Diego Residencial, además de apoyar en la creación de contenido digital mediante la edición de imágenes con Canva y la edición de videos con Filmora.',
+    tags: ['']
   }
 ]
 </script>
@@ -54,132 +36,92 @@ const jobs: Job[] = [
     <hr class="hr">
 
     <!-- contenedor principal -->
-    <div class="container contenedor-experiencia">
+    <div class="container contenedor-experiencia ">
       <!--contenedor de las card -->
-      <article data-aos="fade-up" v-for="(job, i) in jobs" :key="i" class="contenedor-experiencia-card">
+      <section data-aos="fade-up" v-for="(job, i) in jobs" :key="i" class="contenedor-experiencia-card  shadow-lg p-4">
 
         <!--contenedor del tittulo y logo-->
-        <div class="contenedor-experiencia-titulos py-4 mt-4">
+        <div class="contenedor-experiencia-titulos p-3">
 
-          <div class="contenedor-seccion-experiencia-card">
-
-            <!-- titulo del puesto -->
-            <h3 class="text-title">{{ job.role }}</h3>
-
-            <!-- contenedor de la imagen y la info -->
-            <div class="contenedor-experiencia-titulos-info">
-              <img :src="job.logo" :alt="job.company" class="logo" />
-              <div class="text-title-titulos">{{ job.company }}</div>
-            </div>
-
-            <!-- contenedor de la fecha-->
-            <div class="contenedor-experiencia-date text-date"> {{ job.dates }}</div>
+          <!-- titulo del puesto -->
+          <h3 class="text-title">{{ job.role }}</h3>
+          <!-- contenedor de la imagen y la info -->
+          <div class="contenedor-experiencia-titulos-info">
+            <img :src="job.logo" :alt="job.company" class="logo" />
+            <div class="text-title-titulos">{{ job.company }}</div>
           </div>
+
+          <!-- contenedor de la fecha-->
+          <div class="contenedor-experiencia-date text-date"> {{ job.dates }}</div>
         </div>
 
         <!--contenedor de la informacions -->
-        <div class="contenedor-experiencia-info">
+        <div class="contenedor-experiencia-info p-2">
           <!-- texto de la info -->
           <p class="" v-html="highlight(job.summary)"></p>
+          
           <div class="">
             <!-- tecnologias usadas -->
             <span v-for="(tag, t) in job.tags" :key="t" class="tag">{{ tag }}</span>
           </div>
+
         </div>
 
-      </article>
+      </section>
     </div>
   </section>
 </template>
 
 <style scoped>
+
+.text-title{
+ font-size: 20px;
+ color: var(--color-secundario);
+}
+
+.text-title-titulos{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-date{
+  font-size: 14px;
+  font-style: italic;
+  color: #686a6f;
+  padding-top:4px;
+}
+
 /* contenedor principal */
 .contenedor-experiencia-card {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  gap: 30px;
-  padding: 20px;
-  margin: 30px 0px 15px 0px;
-  border-left: 1px solid #c2c2c2;
+  grid-template-columns: 1fr 3fr;
+  border: 1px solid #c2c2c2;
+  border-radius: 10px;
 }
 
-/* contenedor de las card */
+/* contenedor de la card de informacion (Titulo. logo fecha tags) */
 .contenedor-experiencia-titulos {
   width: 100%;
   display: grid;
-  align-content: start;
-}
-
-.contenedor-experiencia-date {
-  padding: 0px !important;
-  padding-left: 70px !important;
-}
-
-/* estilos a los titulos de la experiencia */
-.text-title {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.text-title-titulos {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.text-date {
-  font-size: 15px;
-  font-style: italic;
-  padding: 15px 0px;
-}
-
-/* contenedor del logo y de la informacion */
-.contenedor-experiencia-titulos-info {
-  display: grid;
-  grid-template-columns: 1fr 8fr;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 0;
 }
 
 /* estilos al logos de cada empresa */
 .contenedor-experiencia-titulos img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+  width: 40px;
+  height: auto;
   border-radius: 50px;
 }
 
-
-/* contenedor de la informacion de la experiencia */
-.contenedor-experiencia-info {
-  display: grid;
-  align-content: start;
-  padding: 10px 0px;
-  gap: 10px;
-}
-
-/* estilos al texto del contenido de la experiencia */
-.contenedor-experiencia-info p {
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-/* contenedor de las tags de las tecnologías */
-.contenedor-experiencia-info>div {
+/* contenedor del logo y de la informacion */
+.contenedor-experiencia-titulos-info {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  align-items: center;    
+  gap: 5px;  
 }
 
-/* contenido de las tecnologías usadas  */
-.tag {
+.contenedor-experiencia-info p{
   font-size: 14px;
-  padding: 6px 10px;
-  border-radius: 50px;
-  border: 1px solid #e6e8eb;
   font-weight: 600;
 }
 
@@ -196,33 +138,10 @@ const jobs: Job[] = [
 }
 
 @media(max-width:500px) {
-
-  .text-title-titulos {
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  .text-date {
-    font-size: 12px;
-    padding: 5px 0px;
-  }
-
   .contenedor-experiencia-card {
     width: 100%;
     display: grid;
     place-items: center;
-    gap: 0px;
-    padding: 10px;
-    margin: 0px 0px 30px 0px;
   }
-
-  .contenedor-experiencia-titulos {
-    padding: 0px !important;
-  }
-
-  .contenedor-experiencia-date {
-    padding-left: 60px !important;
-  }
-
 }
 </style>
