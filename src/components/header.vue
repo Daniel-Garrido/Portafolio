@@ -115,6 +115,10 @@ onMounted(() => {
 
 <style>
 
+.navbar {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
 .menu-navegacion img {
   width: 50px;
   height: 50px;

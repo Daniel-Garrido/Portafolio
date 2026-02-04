@@ -9,37 +9,20 @@ export default [
     descripcionDetalladaTecnologias:"Para este proyecto se uso la herramienta Figma para el diseño UI/UX, la cual permite crear prototipos interactivos y diseños visuales de alta calidad. Figma es una herramienta colaborativa que facilita el trabajo en equipo y la retroalimentación en tiempo real.",
 
     categoria: "diseño",
-    imagen: "/proyectos/ProyectoCafeteria1.png",
-    link: "https://www.figma.com/design/NTrPRh1QpjKyrJEJA754Vj/Sitio-Web-cafeteria?node-id=42-1836",
+    imagen: "/proyectos/ProyectoCafeteria1.webp",
+    link: "https://www.behance.net/gallery/236290713/Diseno-UIUX-de-una-cafeteria",
     
     tecnologias: [
       { nombre: "figma", icono: "/iconos/figma.png" }
     ],
     
     galeria: [
-    "/proyectos/ProCoffe3.png",
-    "/proyectos/ProCoffe2.png",
-    "/proyectos/ProCoffe1.png"
+    "/proyectos/ProCoffe3.webp",
+    "/proyectos/ProCoffe2.webp",
+    "/proyectos/ProCoffe1.webp"
     ]
 
     
-  },
-  
-  {
-    titulo: "Maia 2.0",
-    descripcion: "Diseño UI/UX de un Dashboard para la gestión de cuestionarios.",
-    descripcionDetallada:"Este proyecto fue un proyecto de mi servicio social para la empresa  maikron org que se basa en un diseño UI/UX centrado en la creación de un dashboard interactivo y funcional para la gestión de cuestionarios. El objetivo principal fue proporcionar una interfaz intuitiva y moderna que permita a los usuarios gestionar sus cuestionarios de manera eficiente, facilitando la navegación y la interacción con los datos.",
-
-    descripcionDetalladaTecnologias:"Para este proyecto se uso la herramienta Figma para el diseño UI/UX, la cual permite crear prototipos interactivos y diseños visuales de alta calidad. Figma es una herramienta colaborativa que facilita el trabajo en equipo y la retroalimentación en tiempo real.",
-    categoria: "diseño",
-    imagen: "/proyectos/ProyectoDashboardMaia21.png",
-    link: "https://www.figma.com/design/ZprWauw4TBOzH3ryFsLUd3/Dashboard-MAIA-2.0?node-id=0-1",
-    tecnologias: [
-      { nombre: "figma", icono: "/iconos/figma.png" }
-    ],
-     galeria: [
-    "/proyectos/ProMaia1.png",
-    ]
   },
   
   {
@@ -50,34 +33,16 @@ export default [
 
     descripcionDetalladaTecnologias:"Para este proyecto se uso la herramienta Figma para el diseño UI/UX, la cual permite crear prototipos interactivos y diseños visuales de alta calidad. Figma es una herramienta colaborativa que facilita el trabajo en equipo y la retroalimentación en tiempo real.",
     categoria: "diseño",
-    imagen: "/proyectos/ProyectoTecSistemas1.png",
-    link: "https://www.figma.com/design/U1qBT7pu7sFmoI7axRPmiO/Landing-Page-Tecnm-Sistemas?node-id=171-971",
+    imagen: "/proyectos/ProyectoTecSistemas1.webp",
+    link: "https://www.behance.net/gallery/239305545/Landing-page-Tecnm-sistemas",
     tecnologias: [
       { nombre: "figma", icono: "/iconos/figma.png" }
     ],
      galeria: [
-    "/proyectos/ProTec1.png",
+    "/proyectos/ProTec1.webp",
     ]
   },
   
-  {
-    titulo: "Maikron ORG",
-    descripcion: "Sitio web enfocado en la visualización del proyectos de la empresa Maikron ORG.",
-    
-    descripcionDetallada:"Este proyecto fue desarrollado como parte de mi servicio social que se base en el desarrollo de un sitio web para mostrar los proyectos y servicios de la empresa Maikron ORG, una empresa sin fines de lucro ubicado en Ucú, Yucatán. El objetivo principal fue crear una plataforma atractiva y funcional que permita a los usuarios explorar los proyectos de la empresa, facilitando la navegación y el acceso a la información relevante.",
-    
-    descripcionDetalladaTecnologias:"Para este proyecto se uso lenguajes de programación web como HTML, CSS, Boostrap y javascript, para mejorar la experiencia del usuario.",
-    categoria: "programacion",
-    imagen: "/proyectos/ProyectoMaikron1.png",
-    link: "https://maikron.org/",
-    tecnologias: ["html5", "css3", "js", "bootstrap"],
-     galeria: [
-    "/proyectos/ProMaikron1.png",
-    "/proyectos/ProMaikron2.png",
-    "/proyectos/ProMaikron3.png"
-    ]
-  },
-
   {
     titulo: "Laser Pro",
     descripcion: "Landing page para una empresa de depilación laser.",
@@ -87,14 +52,14 @@ export default [
     descripcionDetalladaTecnologias:"Para este proyecto se uso lenguajes de programación web como HTML, CSS y Javascript, ademas que se usaron lirebrias como animate css para mejorar la experiencia del usuario. ademas se usó JQuery para agilizar el proceso de desarrollo y mejorar la interactividad de la página.",
 
     categoria: "programacion",
-    imagen: "/proyectos/ProyectLaserPro1.png",
+    imagen: "/proyectos/ProyectLaserPro1.webp",
     link: "https://daniel-garrido.github.io/Laser-Pro/",
     tecnologias: ["html5", "css3", "js"],
     
     galeria: [
-    "/proyectos/ProLaser1.png",
-    "/proyectos/ProLaser2.png",
-    "/proyectos/ProLaser3.png"
+    "/proyectos/ProLaser1.webp",
+    "/proyectos/ProLaser2.webp",
+    "/proyectos/ProLaser3.webp"
     ]
   },
   
@@ -106,13 +71,13 @@ export default [
     descripcionDetalladaTecnologias:"Para este proyecto se uso el lenguaje de programación Java, el cual es ampliamente utilizado para el desarrollo de aplicaciones de escritorio. Java es conocido por su portabilidad y robustez, lo que lo convierte en una excelente opción para este tipo de proyectos.",
 
     categoria: "software",
-    imagen: "/proyectos/ProyectoItalika1.png",
+    imagen: "/proyectos/ProyectoItalika1.webp",
     link: "https://github.com/Daniel-Garrido/Compilador_A2",
     tecnologias: [
       { nombre: "java", icono: "/iconos/java.png" }
     ],
     galeria: [
-    "/proyectos/ProItalika.png",
+    "/proyectos/ProyectoItalika1.webp",
     ]
   },
   
@@ -124,8 +89,8 @@ export default [
      descripcionDetalladaTecnologias:"Este proyecto se desarrolló utilizando tecnologías modernas como vue js, primevue para la parte del frontend y java con spring boot para la parte del backend. Vue.js es un framework de JavaScript que permite crear interfaces de usuario interactivas y reactivas, mientras que Spring Boot es un framework de Java que facilita el desarrollo de aplicaciones web y servicios RESTful. MySQL se utilizó como base de datos para almacenar la información del sistema.",
    
     categoria: "software",
-    imagen: "/proyectos/ProyectoSGDCM.png",
-    link: "https://www.figma.com/design/NTrPRh1QpjKyrJEJA754Vj/Sitio-Web-cafeteria?node-id=42-1836",
+    imagen: "/proyectos/ProyectoSGDCM.webp",
+    link: "",
     tecnologias: [
       "html5", "css3", "js", "vuejs",
       { nombre: "java", icono: "/iconos/java.png" },
@@ -134,9 +99,9 @@ export default [
     ],
 
     galeria: [
-    "/proyectos/ProSGDM1.png",
-    "/proyectos/ProSGDM2.png",
-    "/proyectos/ProSGDM3.png"
+    "/proyectos/ProSGDM1.webp",
+    "/proyectos/ProSGDM2.webp",
+    "/proyectos/ProSGDM3.webp"
     ]
   }
 ]
