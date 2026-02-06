@@ -78,9 +78,11 @@ onUnmounted(() => {
         </div>
 
         <!-- contenedor img -->
-        <div data-aos="fade-up" class="d-flex justify-content-center contenedor-inicio-img  w-50 p-4">
-          <img class="rounded-circle" src="/logos/FOTOPRINCIPAL.webp" alt="">
+        <div class="d-flex justify-content-center contenedor-inicio-img w-50 p-4">
+          <img class="rounded-circle" src="/logos/FOTOPRINCIPAL.webp" alt="Foto principal" fetchpriority="high"
+            loading="eager" decoding="async">
         </div>
+
 
       </div>
     </div>
@@ -89,7 +91,6 @@ onUnmounted(() => {
 </template>
 
 <style>
-
 /* estilo a la  seccion principal */
 .contenedor-info-inicio h1 {
   font-size: 2.5rem;
@@ -159,8 +160,8 @@ onUnmounted(() => {
   }
 
   .contenedor-info-inicio-text {
-  font-size: 14px !important;
-}
+    font-size: 14px !important;
+  }
 
 }
 </style>

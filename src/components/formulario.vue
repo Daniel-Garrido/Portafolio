@@ -51,39 +51,35 @@ const resetForm = () => {
   <section id="contacto">
     <div class="p-5 formulario_contacto_contenedor">
       <div class="text-center mb-2">
-        <h2 data-aos="fade-down" class="text-dark ">Contacto</h2>
-        <hr class="hr">
+        <h2 data-aos="fade-down" class="text-dark">Contacto</h2>
+        <hr class="hr" />
       </div>
 
-
-      <!-- Inicio del formulario -->
       <form class="formulario_contacto" @submit.prevent="sendEmail">
-
         <div class="formulario_contacto_content">
-          
           <div class="formulario_contacto_content-text">
-            <p data-aos="fade-down" class="text text-center" >
+            <p data-aos="fade-down" class="text text-center">
               ¿Quieres impulsar tu presencia en línea o empezar un nuevo proyecto web?
               Escríbenos a través del formulario y nuestro equipo se comunicará contigo para asesorarte.
             </p>
           </div>
 
           <div class="field">
-            <label  for="emailjs_name">Nombre*</label>
-            <input  class="input" type="text" placeholder="Ingresa tu nombre"
-              v-model="form.emailjs_name" />
+            <label for="emailjs_name">Nombre*</label>
+            <input id="emailjs_name" name="emailjs_name" class="input" type="text" placeholder="Ingresa tu nombre"
+              v-model="form.emailjs_name" required autocomplete="name" />
           </div>
 
           <div class="field">
-            <label  for="emailjs_email">Correo electrónico*</label>
-            <input  class="input" type="email" placeholder="Correo electrónico"
-              v-model="form.emailjs_email" />
+            <label for="emailjs_email">Correo electrónico*</label>
+            <input id="emailjs_email" name="emailjs_email" class="input" type="email" placeholder="Correo electrónico"
+              v-model="form.emailjs_email" required autocomplete="email" />
           </div>
 
           <div class="field">
-            <label for="select">Selecciona tu servicio*</label>
-            <select v-model="form.project_type">
-              <option disabled selected value="">¿Qué servicio te interesa?</option>
+            <label for="project_type">Selecciona tu servicio*</label>
+            <select id="project_type" name="project_type" v-model="form.project_type" required>
+              <option disabled value="">¿Qué servicio te interesa?</option>
               <option value="web">Páginas web</option>
               <option value="movil">Diseño</option>
               <option value="software">Programación</option>
@@ -91,8 +87,9 @@ const resetForm = () => {
           </div>
 
           <div class="field">
-            <label  for="emailjs_message">Cuéntanos más sobre tu proyecto</label>
-            <textarea rows="5" v-model="form.emailjs_message" required></textarea>
+            <label for="emailjs_message">Cuéntanos más sobre tu proyecto*</label>
+            <textarea id="emailjs_message" name="emailjs_message" rows="5" v-model="form.emailjs_message"
+              required></textarea>
           </div>
 
           <div class="text-center">
@@ -102,6 +99,7 @@ const resetForm = () => {
       </form>
     </div>
   </section>
+
 </template>
 
 <style>
@@ -198,8 +196,8 @@ const resetForm = () => {
   }
 
   .field label {
-  font-size: 14px;
-}
+    font-size: 14px;
+  }
 
 }
 </style>
