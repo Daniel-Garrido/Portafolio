@@ -23,7 +23,8 @@ const jobs: Job[] = [
     logo: '/logos/LogoYunow.jpeg',
     summary:'Desarrollo y administración de un sitio web de noticias para Yucatán Now utilizando WordPress y Elementor, enfocándome en la experiencia del usuario y el correcto funcionamiento de la plataforma. Realizo mantenimiento continuo y optimización SEO on-page para mejorar el posicionamiento en buscadores. Brindo soporte y mantenimiento al sitio web de Gran San Diego Residencial, además de apoyar en la creación de contenido digital mediante la edición de imágenes con Canva y la edición de videos con Filmora.',
     tags: ['']
-  }
+  },
+  
 ]
 </script>
 

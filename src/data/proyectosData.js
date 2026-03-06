@@ -103,5 +103,17 @@ export default [
     "/proyectos/ProSGDM2.webp",
     "/proyectos/ProSGDM3.webp"
     ]
+  },
+  
+  {
+    titulo:"Turismo Homún",
+    descripcion:"Desarrollo de una landing page para una empresa de turistica del municipio de Homún, Yucatán ",
+    descripcionDetallada:"Desarrollo de landing page informativa para una empresa turística en Homún, Yucatán, orientada a fortalecer su presencia digital y facilitar el contacto directo con potenciales clientes interesados en experiencias en cenotes.El sitio fue desarrollado en WordPress utilizando Elementor, organizando estratégicamente la información proporcionada por el cliente para lograr una estructura clara, visualmente atractiva y optimizada para dispositivos móviles.Se trabajó en la jerarquización de secciones clave como presentación principal, servicios, galería, ubicación y llamadas a la acción, además de integrar contacto directo mediante WhatsApp para mejorar la conversión.El resultado fue una landing page funcional y profesional que mejora la comunicación digital del negocio y su visibilidad en el entorno online.",
+    descripcionDetalladaTecnologias:"",
+    categoria:"",
+    imagen:"/proyectos/ProTurismoHomun.webp",
+    link:"https://cenotesdehomun.com/",
+    tecnologias:[],
+    galeria:[]
   }
 ]

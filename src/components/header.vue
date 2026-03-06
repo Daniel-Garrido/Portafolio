@@ -84,19 +84,22 @@ onMounted(() => {
             <a id="link-inicio" class="nav-link active text-dark" href="#inicio">Inicio</a>
           </li>   
           <li class="nav-item">
-            <a id="link-sobre-mi" class="nav-link text-dark" href="#sobre-mi">Sobre mí</a>
-          </li>
-          <li class="nav-item">
-            <a id="link-habilidades" class="nav-link text-dark" href="#habilidades">Habilidades</a>
-          </li>
-          <li class="nav-item">
             <a id="link-experiencia" class="nav-link text-dark" href="#experiencia">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a id="link-sobre-mi" class="nav-link text-dark" href="#sobre-mi">Sobre mí</a>
           </li>
           <li class="nav-item">
             <a id="link-proyectos" class="nav-link text-dark" href="#proyectos">Proyectos</a>
           </li>
           <li class="nav-item">
+            <a id="link-habilidades" class="nav-link text-dark" href="#habilidades">Habilidades</a>
+          </li>
+          <li class="nav-item">
             <a id="link-contacto" class="nav-link text-dark" href="#contacto">Contacto</a>
+          </li>
+           <li class="nav-item">
+            <a id="link-certificados" class="nav-link text-dark" href="#certificados">Certificados</a>
           </li>
         </ul>
 
