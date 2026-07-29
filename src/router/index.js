@@ -19,7 +19,8 @@ const routes = [
   {
     path: '/links',
     name: 'Links',
-    component: Links
+    component: Links,
+    meta: { hideHeader: true }
   }
 ]
 

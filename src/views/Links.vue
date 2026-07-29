@@ -4,7 +4,7 @@ import RedesSociales from '../components/RedesSociales.vue'
 
 <template>
   
-  <main class="links-view">
+  <main class="links-view d-flex align-items-center justify-content-center">
     <RedesSociales />
   </main>
 
@@ -12,9 +12,7 @@ import RedesSociales from '../components/RedesSociales.vue'
 
 <style scoped>
 .links-view {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 </style>

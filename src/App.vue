@@ -2,8 +2,10 @@
 
 // Importar los componentes al archivo principal
 import Header from './components/header.vue';
-
+import { useRoute } from 'vue-router';
 import { ref, onMounted, onUnmounted } from 'vue';
+
+const route = useRoute();
 
 const fullName = "Daniel Arcángel Garrido Hoil";
 const typedName = ref("");
@@ -60,7 +62,7 @@ onUnmounted(() => {
       v-show="showScrollButton" @click.prevent="scrollToTop"> <i class="fas fa-arrow-up" aria-hidden="true"></i> 
     </a>
     <!-- seccion de menu de navegacion -->
-    <Header /> 
+    <Header v-if="!route.meta.hideHeader" /> 
   </div>
 
   <router-view />
