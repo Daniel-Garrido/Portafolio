@@ -11,8 +11,17 @@ import RedesSociales from '../components/RedesSociales.vue'
 </template>
 
 <style scoped>
+
 .links-view {
   width: 100%;
   height: 100vh;
 }
+
+@media(max-width: 500px) {
+  .links-view {
+    height: auto;
+    padding-top: 20px;
+  }
+}
+
 </style>

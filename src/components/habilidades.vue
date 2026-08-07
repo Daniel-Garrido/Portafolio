@@ -73,7 +73,7 @@ export default {
   <section id="habilidades" class="d-flex justify-content-center flex-column py-5">
     <!-- titulo de la seccion -->
     <h2 data-aos="fade-down" class="text-center p-2">Stack Tecnológico</h2>
-    <hr class="hr" />
+  
     <p class="text text-center">
       Una colección de tecnologías de software que he dominado, explorado o integrado en soluciones del mundo real.
     </p>

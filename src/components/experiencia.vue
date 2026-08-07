@@ -34,7 +34,7 @@ const jobs: Job[] = [
 
     <!-- titulo de la seccion -->
     <h2 data-aos="fade-down" class="text-center p-2">Experiencia</h2>
-    <hr class="hr">
+   
 
     <!-- contenedor principal -->
     <div class="container contenedor-experiencia ">

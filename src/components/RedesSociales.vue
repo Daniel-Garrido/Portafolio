@@ -4,7 +4,7 @@ import redesSociales from '../data/redesSocialesData.js'
 //Datos del perfil
 const perfil = {
   avatar: '/logos/FOTOPRINCIPAL.webp',
-  bio: 'Soy Ingeniero en Sistemas Computacionales con un enfoque en Ingeniería de Software, especializado en el diseño, desarrollo e implementación de soluciones tecnológicas escalables y de alta calidad. Me apasiona transformar problemas complejos en sistemas eficientes mediante la aplicación de buenas prácticas de arquitectura, desarrollo y mantenimiento de software.'
+  bio: 'Ingeniero en Sistemas y más de un año de experiencia en desarrollo web. Especializado en el diseño, desarrollo e implementación de soluciones tecnológicas escalables y de alta calidad, aplicando buenas prácticas de arquitectura, programación y mantenimiento de software.'
 }
 
 </script>
@@ -99,5 +99,18 @@ const perfil = {
     font-size: 17px !important;
   }
 }
+@media (max-width: 500px) {
 
+  .redes-sociales__bio {
+    font-size: 12px !important;
+  }
+  .redes-sociales__nombre {
+  font-size: 1rem !important;
+  }
+  
+  .redes-sociales__avatar {
+  width: 100px;
+  height: 100px;
+  }
+}
 </style>

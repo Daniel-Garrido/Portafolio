@@ -43,7 +43,7 @@ export default {
   <section id="proyectos" class="bg-white proyectos-section-bg">
     <div class="p-5">
       <h2 class="text-center p-2">Proyectos</h2>
-      <hr class="hr"/>
+      
     </div>
 
     <!-- contnedor principal -->

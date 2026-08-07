@@ -63,6 +63,7 @@ onUnmounted(() => {
     </a>
     <!-- seccion de menu de navegacion -->
     <Header v-if="!route.meta.hideHeader" /> 
+
   </div>
 
   <router-view />
@@ -117,4 +118,6 @@ onUnmounted(() => {
   ;
   transform: scale(1.1);
 }
+
+
 </style>

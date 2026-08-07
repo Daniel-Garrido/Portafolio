@@ -74,7 +74,7 @@ const resetForm = () => {
   <section id="sobre-mi" class="seccion-sobre-mi-content container my-5">
 
     <h2 data-aos="fade-down" class="fw-bold mb-4 text-center  "> Sobre mí</h2>
-    <hr class="hr">
+   
 
     <div class="d-flex justify-content-center align-items-center">
 
