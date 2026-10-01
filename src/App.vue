@@ -82,9 +82,9 @@ onUnmounted(() => {
 }
 
 .btn:hover {
-  background-color: white;
+  background-color: var(--bs-body-bg);
   transition: all 0.5s ease;
-  color: #000 !important;
+  color: var(--bs-body-color) !important;
 }
 
 /**Estilo al btn para redireccionar al inicio */

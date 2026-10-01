@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <footer class="bg-dark footer p-4">
+  <footer class="bg-body-tertiary footer p-4" data-bs-theme="dark">
 
     <section class="container section-footer">
 
@@ -52,7 +52,7 @@
 
 .contenedor-copryrigth {
   padding: 20px;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--bs-border-color);
 }
 
 .contenedor-copryrigth p {

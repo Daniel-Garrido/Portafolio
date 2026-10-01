@@ -64,11 +64,11 @@ const perfil = {
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
 
   /* Sombra */
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--sombra-card);
 
   /* Animaciones */
   transition: all 0.3s ease;

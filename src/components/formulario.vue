@@ -50,17 +50,17 @@ const resetForm = () => {
 
   <section id="contacto">
     <div class="p-5 formulario_contacto_contenedor">
+      
       <div class="text-center mb-2">
-        <h2 data-aos="fade-down" class="text-dark">Contacto</h2>
-        <hr class="hr" />
+        <h2 data-aos="fade-down">Contacto</h2>
       </div>
 
       <form class="formulario_contacto" @submit.prevent="sendEmail">
         <div class="formulario_contacto_content">
           <div class="formulario_contacto_content-text">
             <p data-aos="fade-down" class="text text-center">
-              ¿Quieres impulsar tu presencia en línea o empezar un nuevo proyecto web?
-              Escríbenos a través del formulario y nuestro equipo se comunicará contigo para asesorarte.
+              ¿Quieres impulsar tu presencia en línea o empezar un nuevo proyecto? <br/>
+              Contactame y juntos haremos realidad tus ideas. Estoy aquí para ayudarte a llevar tu proyecto al siguiente nivel.
             </p>
           </div>
 
@@ -159,6 +159,14 @@ const resetForm = () => {
 .field select:hover {
   outline: none;
   box-shadow: none;
+}
+
+/* Fondo y texto de los campos según el tema de Bootstrap */
+.field input,
+.field select,
+.field textarea {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 .field input,

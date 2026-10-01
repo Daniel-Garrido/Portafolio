@@ -93,7 +93,7 @@ export default {
 }
 
 .contenedor-proyectos-router p {
-  color: #686a6f;
+  color: var(--color-texto-secundario);
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
 }

@@ -28,7 +28,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-white">
+  <section id="inicio" class="inicio d-flex justify-content-center align-items-center vh-100 bg-body">
 
     <div class="container">
 
@@ -37,50 +37,57 @@ onUnmounted(() => {
         <!-- contenedor info -->
         <div class="contenedor-info-inicio w-50 p-4">
 
-          <h1 data-aos="fade-up" class="mb-2">Hola, Soy Daniel Garrido </h1>
+          <h1 data-aos="fade-up" class="mb-2">Daniel Garrido </h1>
           <p data-aos="fade-down" class="span-content mb-3">{{ typedName }}</p>
           <p data-aos="fade-up" class="contenedor-info-inicio-text">
-            Soy Ingeniero en Sistemas Computacionales que une la lógica del <span class="span-content">Desarrollo de
-              Software </span> con la creatividad
-            del diseño.
-
-            Mi enfoque se centra en el <span class="span-content">Desarrollo Web completo, </span> complementado con una
-            fuerte habilidad en Diseño UI/UX
-            para traducir requisitos complejos en interfaces sencillas y efectivas.
-
-            Cuento con experiencia en <span class="span-content">Diseño Web </span> y estoy comprometido con la entrega
-            de soluciones que no solo funcionen
-            a la perfección, sino que también deleiten al usuario.
+            Ingeniero en sistemas computacionales y Desarrollador Full Stack con experiencia en el diseño, desarrollo y
+            mantenimiento de aplicaciones web escalables. Especializado en el <span class="span-content">desarrollo
+              backend</span> con Laravel e
+            interfaces
+            dinámicas con <span class="span-content">React, JavaScript y TypeScript</span>. <br>
+            Cuento además con experiencia como Diseñador Web mediante
+            WordPress y Elementor, optimizando la maquetación y la experiencia visual de los proyectos. Capaz de
+            adaptarme a proyectos de diversa complejidad en todo el ciclo de vida del software y con manejo de <span
+              class="span-content">inglés
+              técnico</span> (B1).
           </p>
 
           <!-- Contenedor de redes sociales -->
-          <div data-aos="fade-down" class=" iconos d-flex justify-content-center mb-3 animacion-redes-sociales">
-            <a href="https://www.linkedin.com/in/daniel-garrido-05138b225/" target="_blank"
-              class="text-decoration-none me-3">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Daniel-Garrido" target="_blank" class="text-decoration-none me-3">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/daniel.garrido_/" target="_blank" class="text-decoration-none">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
+          <div data-aos="fade-down" class="contenedor-redes-sociales d-flex flex-wrap justify-content-start mb-3 animacion-redes-sociales gap-2">
 
-          <!-- Botón de contacto -->
-          <div class="d-flex justify-content-center ">
-            <div data-aos="fade-up" class="btn-primario">
-              <a href="#contacto" class="">Contacto</a>
+            <!-- Icono de LinkedIn -->
+            <div class="iconos contenedor-redes-sociales-links d-flex justify-content-center align-items-center gap-2">
+              <a href="https://www.linkedin.com/in/daniel-garrido-05138b225/" target="_blank"
+                class="text-decoration-none text-body">
+                <i class="fab fa-linkedin"></i>
+                linkedin
+              </a>
             </div>
-          </div>
 
+            <!-- Icono de Github -->
+            <div class="iconos contenedor-redes-sociales-links d-flex justify-content-center align-items-center gap-2">
+              <a href="https://github.com/Daniel-Garrido" target="_blank" class="text-decoration-none text-body">
+                <i class="fab fa-github"></i>
+                Github
+              </a>
+            </div>
+
+            <!-- Icono de Instagram -->
+            <div class="iconos contenedor-redes-sociales-links d-flex justify-content-center align-items-center gap-2">
+              <a href="https://www.instagram.com/daniel.garrido_/" target="_blank"
+                class="text-decoration-none text-body">
+                <i class="fab fa-instagram"></i>
+                Instagram
+              </a>
+            </div>
+
+          </div>
 
         </div>
-
         <!-- contenedor img -->
         <div class="d-flex justify-content-center contenedor-inicio-img w-50 p-4">
-          <img class="rounded-circle" src="/logos/FOTOPRINCIPAL.webp" alt="Foto principal" fetchpriority="high"
-            loading="eager" decoding="async">
+          <img data-aos="fade-up" class="rounded-circle" src="/logos/FOTOPRINCIPAL.webp" alt="Foto principal"
+            fetchpriority="high" loading="eager" decoding="async">
         </div>
 
 
@@ -91,18 +98,21 @@ onUnmounted(() => {
 </template>
 
 <style>
+
+
 /* estilo a la  seccion principal */
 .contenedor-info-inicio h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  font-weight: 900;
 }
 
 .contenedor-info-inicio p {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .contenedor-info-inicio-text {
   font-size: 1rem !important;
-  text-align: justify;
+  text-align: left;
 }
 
 /* estilo a los iconos */
@@ -114,6 +124,13 @@ onUnmounted(() => {
 .contenedor-inicio-img img {
   width: 80%;
 }
+
+.contenedor-redes-sociales-links {
+  border: 1px solid var(--color-borde);
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
 
 /*************** media querys *****************/
 @media (max-width: 900px) {
@@ -140,6 +157,11 @@ onUnmounted(() => {
     text-align: center;
   }
 
+  /* Centrar los botones de redes igual que el texto */
+  .contenedor-redes-sociales {
+    justify-content: center !important;
+  }
+
 }
 
 /* Medioa querys apartir de 500 px */
@@ -161,6 +183,21 @@ onUnmounted(() => {
 
   .contenedor-info-inicio-text {
     font-size: 14px !important;
+  }
+
+  /* Botones de redes más compactos para que quepan en pantallas pequeñas */
+  .contenedor-redes-sociales-links {
+    padding: 4px 10px;
+  }
+
+  .contenedor-redes-sociales-links a {
+    font-size: 15px;
+    padding-right: 0;
+  }
+
+  .contenedor-redes-sociales-links i {
+    font-size: 22px;
+    vertical-align: middle;
   }
 
 }

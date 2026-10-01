@@ -96,7 +96,7 @@ export default {
       </ul>
 
       <!-- Contenedor de las tecnologías -->
-      <div class="tech-grid  bg-light p-4 border rounded-3">
+      <div class="tech-grid bg-body-tertiary p-4 border rounded-3">
         <div
           v-for="t in filteredTech"
           :key="t.id"
@@ -172,7 +172,7 @@ export default {
   width: 100%;
   display: grid;
   place-items: center;
-  background: #dedede;
+  background: var(--bs-secondary-bg);
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
@@ -181,8 +181,8 @@ export default {
 
 .tech-card:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-  background-color: #c2c2c2;
+  box-shadow: var(--sombra-card);
+  background-color: var(--bs-tertiary-bg);
 }
 
 /* Estilos a los iconos de las tecnologías */

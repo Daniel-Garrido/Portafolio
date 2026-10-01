@@ -3,13 +3,13 @@
 
 <template>
 
-  <section id="servicios" class="seccion-servicios  bg-white">
+  <section id="servicios" class="seccion-servicios bg-body">
     
     <!-- contenedor principal -->
     <div class="">
       <!-- contenedor del texto del encabezado -->
       <div class="text-center mb-5">
-        <h2 data-aos="fade-down" class="text-dark " >Servicios</h2>
+        <h2 data-aos="fade-down">Servicios</h2>
         <hr class="hr">
       </div>
 
@@ -95,19 +95,19 @@
   cursor: pointer;
   gap: 20px;
   padding: 20px;
-  background-color: var(--color-principal);
+  background-color: var(--color-superficie);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .seccion-servicios-content-card:hover{
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--sombra-card);
 }
 
 .seccion-servicios-content-card p{
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #686a6f;
+  color: var(--color-texto-secundario);
 }
 
 @media (max-width: 500px) {
@@ -122,7 +122,7 @@
 
   .seccion-servicios-content-card {
     width: 100%;
-    border: 1px solid #c2c2c2;
+    border: 1px solid var(--color-borde);
   }
  
   .seccion-servicios-content-card h3{

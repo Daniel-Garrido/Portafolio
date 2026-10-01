@@ -40,7 +40,7 @@ export default {
 <template>
 
   <!-- seccion de proyectos -->
-  <section id="proyectos" class="bg-white proyectos-section-bg">
+  <section id="proyectos" class="bg-body proyectos-section-bg">
     <div class="p-5">
       <h2 class="text-center p-2">Proyectos</h2>
       
@@ -204,12 +204,12 @@ export default {
 <style>
 .form-select {
   width: 50%;
-  border: 1px solid #686a6f;
+  border: 1px solid var(--color-borde);
   padding: 5px 15px;
 }
 
 .form-select:hover {
-  border: 1px solid #686a6f;
+  border: 1px solid var(--color-borde);
 }
 
 .card-proyectos {

@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <!-- Aplica el tema guardado (claro/oscuro de Bootstrap) antes de pintar la página para evitar destellos.
+       El modo claro es el predeterminado; solo se usa el oscuro si el usuario lo eligió antes. -->
+  <script>
+    (function () {
+      var theme = 'light';
+      try {
+        var saved = localStorage.getItem('theme');
+        // Migra la preferencia guardada por la versión anterior del modo oscuro
+        if (!saved && localStorage.getItem('darkMode') === 'true') saved = 'dark';
+        if (saved === 'dark') theme = 'dark';
+      } catch (e) { }
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" href="./src/assets/Imagenes/Logo-icon.png">
 
   <!-- etiquetas para el SEO -->
